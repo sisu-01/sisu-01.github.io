@@ -12,18 +12,59 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Ggul-Johab (꿀조합)",
-    summary: "나만의 편의점 레시피를 공유하는 커뮤니티 플랫폼",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    description: "사용자가 자신만의 음식 조합을 공유하고 추천받을 수 있는 서비스입니다. Prisma ORM을 통해 복잡한 데이터 관계를 정의하고 관리했습니다.",
-    repoUrl: "https://github.com/sisu-01/ggul-johab"
+    title: "V-pad",
+    summary: "키로거 방지 보안 가상 키패드",
+    tags: ["Javascript", "Node.js", "Linux", "Apache"],
+    description: "",
+    repoUrl: ""
   },
   {
     id: 2,
-    title: "Roll-den-bell (롤든벨)",
-    summary: "게임 지식 퀴즈 및 SEO 최적화 프로젝트",
-    tags: ["React", "AdSense", "SEO"],
-    description: "구글 검색 결과 노출을 극대화하기 위한 SEO 설정법을 익히고, 사용자 경험(UX)의 중요성을 체감하며 제작한 퀴즈 앱입니다.",
-    repoUrl: "https://github.com/sisu-01/roll-den-bell"
-  }
+    title: "PowerWinup",
+    summary: "자산관리 윈도우 업데이트 제어",
+    tags: ["HTML", "CSS", "Javascript", "Java", "Spring", "Websocket", "MariaDB", "Linux", "Tomcat", "Apache"],
+    description: "진짜입",
+    repoUrl: ""
+  },
+  {
+    id: 3,
+    title: "SISU",
+    summary: "개인 블로그",
+    tags: ["HTML", "CSS", "Javascript", "Python", "Django", "MariaDB", "Linux", "Nginx", "Docker"],
+    description: "ㅋㅋ긔",
+    repoUrl: ""
+  },
+  {
+    id: 4,
+    title: "카연갤 북마크",
+    summary: "개인 블로그",
+    tags: ["HTML", "CSS", "Javascript", "React", "Next.js", "Python", "MongoDB", "Linux", "Docker"],
+    description: "ㅋㅋ긔",
+    repoUrl: ""
+  },
+  {
+    id: 4,
+    title: "써브웨이 라벨 프린팅",
+    summary: "개인 블로그",
+    tags: ["HTML", "CSS", "Javascript", "React", "Next.js", "Python", "MongoDB", "Linux", "Docker"],
+    description: "ㅋㅋ긔",
+    repoUrl: ""
+  },
+  {
+    id: 4,
+    title: "게임 데브 툴",
+    summary: "개인 블로그",
+    tags: ["HTML", "CSS", "Javascript", "React", "Next.js", "Python", "MongoDB", "Linux", "Docker"],
+    description: "ㅋㅋ긔",
+    repoUrl: ""
+  },
+  {
+    id: 4,
+    title: "도전! 롤든벨",
+    summary: "개인 블로그",
+    tags: ["HTML", "CSS", "Javascript", "React", "Next.js", "Python", "MongoDB", "Linux", "Docker"],
+    description: "ㅋㅋ긔",
+    repoUrl: ""
+  },
+
 ];
