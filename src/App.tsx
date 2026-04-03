@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import './App.css'; // 1. 일반 CSS 임포트로 변경
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { PROJECTS } from './projects';
 
 function App() {
-  const [activeId, setActiveId] = useState<number | null>(null);
-
   return (
     <div className="container"> {/* 2. className을 일반 문자열로 수정 */}
       <header className="header">
@@ -31,42 +28,38 @@ function App() {
 
       <section className="project-list">
         <h2 style={{ marginBottom: '25px' }}>Projects</h2>
-
-        {PROJECTS.map((project) => (
-          <div 
-            key={project.id}
-            // active 상태일 때 클래스 추가 로직
-            className={`project-card ${activeId === project.id ? 'active' : ''}`}
-            onClick={() => setActiveId(activeId === project.id ? null : project.id)}
-          >
-            <div className="project-header">
-              <h3 className="project-title">{project.title}</h3>
-              <FontAwesomeIcon 
-                icon={faChevronDown} 
-                className={`arrow ${activeId === project.id ? 'active' : ''}`} 
-              />
-            </div>
-            <p className="project-summary">{project.summary}</p>
-            
-            <div className="project-detail">
-              <div>
-                {project.tags.map(tag => (
-                  <span key={tag} className="tag">{tag}</span>
-                ))}
+        <div className="project-grid">
+          {PROJECTS.map((project) => (
+            <div 
+              key={project.id}
+              className="project-card"
+            >
+              <div className="project-header">
+                <h3 className="project-title">{project.title}</h3>
               </div>
-              <p>{project.description}</p>
-              <a 
-                href={project.repoUrl} 
-                target="_blank" 
-                rel="noreferrer" 
-                className="repo-link"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <FontAwesomeIcon icon={faGithub} /> View Repository →
-              </a>
+              <p className="project-summary">{project.summary}</p>
+              
+              <div className="project-detail">
+                <div>
+                  {project.tags.map(tag => (
+                    <span key={tag} className="tag">{tag}</span>
+                  ))}
+                </div>
+                <p>{project.description}</p>
+                {project.repoUrl?.trim() ? (
+                  <a 
+                    href={project.repoUrl} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="repo-link"
+                  >
+                    <FontAwesomeIcon icon={faGithub} /> View Repository →
+                  </a>
+                ) : null}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
     </div>
   );
