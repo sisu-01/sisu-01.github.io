@@ -1,10 +1,22 @@
+import { useState } from 'react';
 import './App.css'; // 1. 일반 CSS 임포트로 변경
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { PROJECTS } from './projects';
 
 function App() {
+  const [openIds, setOpenIds] = useState<Set<number>>(() => new Set());
+
+  const toggleProject = (id: number) => {
+    setOpenIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
   return (
     <div className="container"> {/* 2. className을 일반 문자열로 수정 */}
       <header className="header">
@@ -29,13 +41,20 @@ function App() {
       <section className="project-list">
         <h2 style={{ marginBottom: '25px' }}>Projects</h2>
         <div className="project-grid">
-          {PROJECTS.map((project) => (
+          {PROJECTS.map((project) => {
+            const isOpen = openIds.has(project.id);
+            return (
             <div 
               key={project.id}
-              className="project-card"
+              className={`project-card ${isOpen ? 'active' : ''}`}
+              onClick={() => toggleProject(project.id)}
             >
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`arrow ${isOpen ? 'active' : ''}`}
+                />
               </div>
               <p className="project-summary">{project.summary}</p>
               
@@ -52,13 +71,15 @@ function App() {
                     target="_blank" 
                     rel="noreferrer" 
                     className="repo-link"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <FontAwesomeIcon icon={faGithub} /> View Repository →
                   </a>
                 ) : null}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     </div>

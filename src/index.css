@@ -70,6 +70,8 @@ h1 { margin: 10px 0; font-size: 2.5rem; }
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+    /* 같은 행에서 한 카드만 펼쳐도, 옆 카드는 본인 콘텐츠 높이만 유지 */
+    align-items: start;
 }
 
 @media (max-width: 768px) {
@@ -83,6 +85,7 @@ h1 { margin: 10px 0; font-size: 2.5rem; }
     border-radius: 12px;
     padding: 24px;
     border: 1px solid #e2e8f0;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -115,7 +118,19 @@ h1 { margin: 10px 0; font-size: 2.5rem; }
 .project-detail {
     display: flex;
     flex-direction: column;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    transition: max-height 0.4s ease-in-out, opacity 0.35s ease-in-out, margin-top 0.35s ease, padding-top 0.35s ease;
+}
+
+.project-card.active .project-detail {
     flex: 1;
+    max-height: 2000px;
+    opacity: 1;
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #f1f5f9;
@@ -145,3 +160,6 @@ h1 { margin: 10px 0; font-size: 2.5rem; }
     font-size: 0.95rem;
 }
 .repo-link:hover { text-decoration: underline; }
+
+.arrow { transition: transform 0.3s; color: #cbd5e1; }
+.project-card.active .arrow { transform: rotate(180deg); }
