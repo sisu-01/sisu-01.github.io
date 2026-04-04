@@ -88,7 +88,7 @@ h1 { margin: 10px 0; font-size: 2.5rem; }
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.22s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.22s cubic-bezier(0.33, 1, 0.68, 1), border-color 0.22s ease-out;
     overflow: hidden;
 }
 
@@ -124,16 +124,25 @@ h1 { margin: 10px 0; font-size: 2.5rem; }
     margin-top: 0;
     padding-top: 0;
     border-top: none;
-    transition: max-height 0.4s ease-in-out, opacity 0.35s ease-in-out, margin-top 0.35s ease, padding-top 0.35s ease;
+    transition:
+        max-height 0.22s cubic-bezier(0.33, 1, 0.68, 1),
+        opacity 0.14s ease-out,
+        margin-top 0.18s ease-out,
+        padding-top 0.18s ease-out;
 }
 
 .project-card.active .project-detail {
     flex: 1;
-    max-height: 2000px;
+    max-height: min(120vh, 1600px);
     opacity: 1;
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #f1f5f9;
+    transition:
+        max-height 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+        opacity 0.16s ease-out 0.02s,
+        margin-top 0.18s ease-out,
+        padding-top 0.18s ease-out;
 }
 
 .tag {
@@ -161,5 +170,5 @@ h1 { margin: 10px 0; font-size: 2.5rem; }
 }
 .repo-link:hover { text-decoration: underline; }
 
-.arrow { transition: transform 0.3s; color: #cbd5e1; }
+.arrow { transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1); color: #cbd5e1; }
 .project-card.active .arrow { transform: rotate(180deg); }
