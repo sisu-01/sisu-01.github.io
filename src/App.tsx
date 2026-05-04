@@ -1,87 +1,47 @@
 import { useState } from 'react';
 import './App.css'; // 1. 일반 CSS 임포트로 변경
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import CategoryToggle from './components/CategoryToggle';
+import Project from './components/Project';
 import { PROJECTS } from './projects';
+import type { ProjectType } from './types';
+
+const getProjectList = (project: ProjectType[]) => {
+  const mainList = [];
+  const sideList = [];
+  for (const p of project) {
+    if (p.isMain) {
+      mainList.push(p)
+    } else {
+      sideList.push(p)
+    }
+  }
+  return {mainList: mainList, sideList: sideList}
+}
 
 function App() {
-  const [openIds, setOpenIds] = useState<Set<number>>(() => new Set());
-
-  const toggleProject = (id: number) => {
-    setOpenIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  };
-
+  const projectList = getProjectList(PROJECTS);
+  const [getCategories, setCategories] = useState<string[]>([]);
+  
   return (
-    <div className="container"> {/* 2. className을 일반 문자열로 수정 */}
-      <header className="header">
-        <div className="profile-img">
-          <FontAwesomeIcon icon={faUser} />
-        </div>
-        <h1 className="title">sisu-01</h1>
-        <div className="subtitle">Software Developer</div>
-        
-        <div style={{ marginTop: '15px' }}>
-          <a href="https://github.com/sisu-01" target="_blank" rel="noreferrer" className="github-btn">
-            <FontAwesomeIcon icon={faGithub} /> <span>GitHub</span>
-          </a>
-        </div>
-
-        <p className="intro">
-          효율적인 코드와 사용자 중심의 인터페이스를 설계하는 데 집중하고 있습니다. <br />
-          새로운 기술을 학습하고 이를 프로젝트에 녹여내는 과정을 즐깁니다.
-        </p>
-      </header>
-
-      <section className="project-list">
-        <h2 style={{ marginBottom: '25px' }}>Projects</h2>
-        <div className="project-grid">
-          {PROJECTS.map((project) => {
-            const isOpen = openIds.has(project.id);
-            return (
-            <div 
-              key={project.id}
-              className={`project-card ${isOpen ? 'active' : ''}`}
-              onClick={() => toggleProject(project.id)}
-            >
-              <div className="project-header">
-                <h3 className="project-title">{project.title}</h3>
-                <FontAwesomeIcon
-                  icon={faChevronDown}
-                  className={`arrow ${isOpen ? 'active' : ''}`}
-                />
-              </div>
-              <p className="project-summary">{project.summary}</p>
-              
-              <div className="project-detail">
-                <div>
-                  {project.tags.map(tag => (
-                    <span key={tag} className="tag">{tag}</span>
-                  ))}
-                </div>
-                <p>{project.description}</p>
-                {project.repoUrl?.trim() ? (
-                  <a 
-                    href={project.repoUrl} 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="repo-link"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <FontAwesomeIcon icon={faGithub} /> View Repository →
-                  </a>
-                ) : null}
-              </div>
-            </div>
-            );
-          })}
-        </div>
-      </section>
+    <div>
+      <CategoryToggle getCategories={getCategories} setCategories={setCategories} />
+      <div>
+        {getCategories.map((c) => (
+          <span key={c}>{c}</span>
+        ))}
+      </div>
+      <h1>메인</h1>
+      <div>
+        {projectList["mainList"].map((project) => (
+          <Project key={project.id} project={project} isMain={true}/>
+        ))}
+      </div>
+      <h1>사이드</h1>
+      <div>
+        {projectList["sideList"].map((project) => (
+          <Project key={project.id} project={project} isMain={false}/>
+        ))}
+      </div>
     </div>
   );
 }

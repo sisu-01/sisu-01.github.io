@@ -1,174 +1,111 @@
 :root {
-    --primary-color: #2563eb;
-    --bg-color: #f8fafc;
-    --text-color: #1e293b;
-    --card-bg: #ffffff;
-    --github-color: #24292e;
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-    padding: 40px 20px;
+  margin: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
 }
 
-/* 1. 프로필 & 2. 자기소개 */
-header {
-    text-align: center;
-    margin-bottom: 60px;
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
 }
 
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: #e2e8f0;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: #94a3b8;
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
 }
 
-h1 { margin: 10px 0; font-size: 2.5rem; }
-.subtitle { color: var(--primary-color); font-weight: 600; font-size: 1.2rem; }
-.intro { max-width: 600px; margin: 20px auto; color: #64748b; }
-
-/* 프로필 GitHub 링크 스타일 */
-.profile-links {
-    margin-top: 15px;
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
 }
-.github-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--github-color);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.2s;
-}
-.github-btn:hover { opacity: 0.9; }
-
-/* 3. 프로젝트 목록 */
-.project-list {
-    display: block;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    /* 같은 행에서 한 카드만 펼쳐도, 옆 카드는 본인 콘텐츠 높이만 유지 */
-    align-items: start;
-}
-
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.project-card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 24px;
-    border: 1px solid #e2e8f0;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.22s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.22s cubic-bezier(0.33, 1, 0.68, 1), border-color 0.22s ease-out;
-    overflow: hidden;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px -10px rgba(0,0,0,0.1);
-    border-color: var(--primary-color);
-}
-
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.project-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.project-summary {
-    margin: 10px 0 0 0;
-    color: #64748b;
-}
-
-.project-detail {
-    display: flex;
-    flex-direction: column;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-    transition:
-        max-height 0.22s cubic-bezier(0.33, 1, 0.68, 1),
-        opacity 0.14s ease-out,
-        margin-top 0.18s ease-out,
-        padding-top 0.18s ease-out;
-}
-
-.project-card.active .project-detail {
-    flex: 1;
-    max-height: min(120vh, 1600px);
-    opacity: 1;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #f1f5f9;
-    transition:
-        max-height 0.24s cubic-bezier(0.33, 1, 0.68, 1),
-        opacity 0.16s ease-out 0.02s,
-        margin-top 0.18s ease-out,
-        padding-top 0.18s ease-out;
-}
-
-.tag {
-    display: inline-block;
-    background: #eff6ff;
-    color: var(--primary-color);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    margin-right: 8px;
-    margin-bottom: 8px;
-}
-
-/* 프로젝트 상세 GitHub 링크 */
-.repo-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: auto;
-    padding-top: 15px;
-    color: var(--github-color);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-.repo-link:hover { text-decoration: underline; }
-
-.arrow { transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1); color: #cbd5e1; }
-.project-card.active .arrow { transform: rotate(180deg); }
