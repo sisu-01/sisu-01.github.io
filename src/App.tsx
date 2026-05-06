@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css'; // 1. 일반 CSS 임포트로 변경
 import CategoryToggle from './components/CategoryToggle';
-import Project from './components/Project';
+import Projects from './components/Projects';
 import { PROJECTS } from './projects';
 import type { ProjectType } from './types';
 
@@ -32,15 +32,11 @@ function App() {
       </div>
       <h1>메인</h1>
       <div>
-        {projectList["mainList"].map((project) => (
-          <Project key={project.id} project={project} isMain={true}/>
-        ))}
+        <Projects projects={projectList["mainList"]} isMain={true}/>
       </div>
       <h1>사이드</h1>
       <div>
-        {projectList["sideList"].map((project) => (
-          <Project key={project.id} project={project} isMain={false}/>
-        ))}
+        <Projects projects={projectList["sideList"]} isMain={false}/>
       </div>
     </div>
   );

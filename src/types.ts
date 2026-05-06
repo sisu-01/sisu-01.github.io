@@ -9,7 +9,6 @@ export type StackDetail = {
   }[];
 }
 export type ProjectType = {
-  id: number;
   title: string;
   summary: string;
   isMain: boolean;

@@ -4,7 +4,6 @@ import type { ProjectType } from "./types";
 
 export const PROJECTS: ProjectType[] = [
   {
-    id: 1,
     title: "V-pad",
     summary: "키로거 방지 보안 가상 키패드",
     isMain: true,
@@ -32,54 +31,61 @@ export const PROJECTS: ProjectType[] = [
             description: "크앗"
           }
         ]
+      },
+      {
+        type: "데브옵스",
+        tags: ["Linux", "Apache"],
+        contents: [
+          {
+            features: "리눅스 서버에 아파치로 배포",
+            description: "이게 맞나 슈슝"
+          }
+        ]
       }
     ],
-    // tags: [, "", "", "Linux", "Apache"],
-    etc: "뭐 그런 랄까 ㅋㅋ",
+    etc: "첫 플젝 흐엥",
+    repoUrl: "https://www.google.com"
+  },
+  {
+    title: "몰래 만든 사이드 ㅋㅋ",
+    summary: "으햐햐햐햣",
+    isMain: false,
+    techStack: [
+      {
+        type: "데브옵스",
+        tags: ["Docker"],
+        contents: [
+          {
+            features: "도커가 자동으로 꺼짐;",
+            description: "이게 맞나 슈슝",
+          }
+        ]
+      }
+    ],
+    // tags: [, "JavaScript", "Node.js", "Linux", "Apache"],
+    etc: "그 없",
     repoUrl: ""
   },
-  // {
-  //   id: 2,
-  //   title: "몰래 만든 사이드 ㅋㅋ",
-  //   summary: "으햐햐햐햣",
-  //   isMain: false,
-  //   techStack: [
-  //     {
-  //       type: "데브옵스",
-  //       tags: ["Docker"],
-  //       contents: [
-  //         {
-  //           features: "도커가 자동으로 꺼짐;",
-  //           description: "이게 맞나 슈슝",
-  //         }
-  //       ]
-  //     }
-  //   ],
-  //   // tags: [, "JavaScript", "Node.js", "Linux", "Apache"],
-  //   etc: "그 없",
-  //   repoUrl: ""
-  // },
-  // {
-  //   id: 3,
-  //   title: "지구정복해킹툴",
-  //   summary: "이거 있으면 지구 멸망",
-  //   isMain: true,
-  //   techStack: [
-  //     {
-  //       type: "백엔드",
-  //       tags: ["Python"],
-  //       contents: [
-  //         {
-  //           features: "사람 머리에 짜장면 소환",
-  //           description: "마법으로 구현했습니다 굳굳",
-  //         }
-  //       ]
-  //     }
-  //   ],
-  //   // tags: [, "JavaScript", "Node.js", "Linux", "Apache"],
-  //   etc: "너만 쓰세요 ㅎㅎ",
-  //   repoUrl: "https://www.naver.com"
-  // },
+  {
+    title: "지구정복해킹툴",
+    summary: "이거 있으면 지구 멸망",
+    isMain: true,
+    techStack: [
+      {
+        type: "백엔드",
+        tags: ["Python"],
+        contents: [
+          {
+            features: "사람 머리에 짜장면 소환",
+            description: "마법으로 구현했습니다 굳굳",
+          }
+        ]
+      }
+    ],
+    // tags: [, "JavaScript", "Node.js", "Linux", "Apache"],
+    etc: "너만 쓰세요 ㅎㅎ",
+    repoUrl: "https://www.naver.com"
+  },
 
 
 
