@@ -54,7 +54,7 @@
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
+  /* text-align: center; */
   border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
@@ -108,4 +108,23 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.프론트엔드 {
+  background-color: #ff5858;
+  color: white;
+}
+.백엔드 {
+  background-color: #c5ff91;
+  color: #333;
+}
+.데브옵스 {
+  background-color: #bfa6ff;
+  color: white;
 }

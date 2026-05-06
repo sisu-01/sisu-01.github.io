@@ -1,5 +1,6 @@
 import type { ProjectType } from "../types";
-import TechStack from "./TechStack";
+import Stack from "./TechStack/Stack";
+import Tags from "./TechStack/Tags";
 
 interface ProjectProps {
   project: ProjectType;
@@ -23,7 +24,8 @@ const Project = ({ project, isMain }: ProjectProps) => {
       )}
       <div>
         <div>
-          <TechStack techStack={project.techStack}/>
+          <Tags techStack={project.techStack} />
+          <Stack techStack={project.techStack} />
           {project.etc}
         </div>
       </div>
