@@ -1,20 +1,20 @@
 import type { Dispatch, SetStateAction } from "react";
-import { CATEGORIES } from "../types";
+import { CATEGORIES, type Type } from "../types";
 
 interface CategoryToggleProps {
-  getCategories: string[];
-  setCategories: Dispatch<SetStateAction<string[]>>;
+  getCategories: Type[];
+  setCategories: Dispatch<SetStateAction<Type[]>>;
 }
 
 const CategoryToggle = ({ getCategories, setCategories }: CategoryToggleProps) => {
 
-  const toggleCategory = (category: string) => {
-    if (getCategories.includes(category)) {
+  const toggleCategory = (category: Type) => {
+    if (getCategories.includes(category as Type)) {
       // 이미 있으면 제거 (끄기)
       setCategories(getCategories.filter((c) => c !== category));
     } else {
       // 없으면 추가 (켜기)
-      setCategories([...getCategories, category]);
+      setCategories([...getCategories, category as Type]);
     }
   };
 

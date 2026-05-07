@@ -1,20 +1,21 @@
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12개의 동일한 비율 컬럼 */
-  gap: 20px; /* 컬럼 사이 간격 */
+  gap: 10px; /* 컬럼 사이 간격 */
 }
-
 .wrapper {
   grid-column: span 6;
   border: 5px solid black;
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px;
   color: black;
 }
-
 .isMain {
   background-color: rgb(202, 178, 178);
 }
 .isSide {
   background-color: rgb(47, 83, 43);
+}
+.link {
+  float: right;
 }

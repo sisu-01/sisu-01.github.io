@@ -2,23 +2,16 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
+  flex-wrap: wrap;
 }
 .typeWrapper {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  flex-wrap: wrap;
 }
-.프론트엔드 {
-  background-color: #ff5858;
-  color: white;
-}
-.백엔드 {
-  background-color: #c5ff91;
-  color: #333;
-}
-.데브옵스 {
-  background-color: #bfa6ff;
-  color: white;
+.active > ul > li {
+  border: 5px solid gold;
 }
 .item {
   border: 1px solid white;
