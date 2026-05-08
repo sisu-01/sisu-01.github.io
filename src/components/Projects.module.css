@@ -1,6 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12개의 동일한 비율 컬럼 */
+  align-items: start;
   gap: 10px; /* 컬럼 사이 간격 */
 }
 .wrapper {
