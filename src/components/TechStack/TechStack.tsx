@@ -15,6 +15,7 @@ const TechStack = ({ techStack, getCategories }: TechStackProps) => {
         const isActive = getCategories.includes(stack.type as Type);
         return (
           <li key={stack.type} className={`${stack.type} ${isActive ? styles.active : ''}`}>
+            <div className={styles.category} style={{ borderLeft: `var(--color-${stack.type}) 5px solid` }}>{stack.type}</div>
             <ul className={styles.container}>
               {stack.contents.map((content) => (
                 <li key={content.features} className={styles.item}>

@@ -18,10 +18,12 @@
 }
 .tag {
   border: 1px solid white;
-  border-radius: 15px;  
-  background-color: black;
+  border-radius: 30px;  
+  background-color: white;
   padding: 5px;
-  color: white;
+  color: black;
+  font-size: 0.8rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .badge {
   height: 1.5rem;

@@ -22,12 +22,12 @@ const Tags = ({ techStack, getCategories }: TagsProps) => {
             <ul className={styles.typeWrapper}>
               {value?.map((tag) => (
                 <li key={tag} className={styles.item}>
-                  {/* <span className={styles.tag}>{tag}</span> */}
-                  <img 
+                  <span className={styles.tag}>{tag}</span>
+                  {/* <img
                     src={`https://img.shields.io/badge/${tag}-${TECH_BADGE_INFO[tag]?.color || 'white'}?&logo=${TECH_BADGE_INFO[tag]?.logo || tag}&logoColor=white`} 
                     className={styles.badge}
                     alt={`${tag} badge`} 
-                  />
+                  /> */}
                 </li>
               ))}
             </ul>

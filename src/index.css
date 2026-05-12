@@ -1,4 +1,7 @@
 :root {
+  --color-프론트엔드: red;
+  --color-백엔드: green;
+  --color-데브옵스: purple;
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;

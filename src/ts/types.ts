@@ -10,6 +10,7 @@ export type StackDetail = {
 }
 export type ProjectType = {
   title: string;
+  subtitle: string;
   summary: string;
   isMain: boolean;
   techStack: StackDetail[];

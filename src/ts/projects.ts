@@ -5,7 +5,8 @@ import type { ProjectType } from "./types";
 export const PROJECTS: ProjectType[] = [
   {
     title: "V-pad",
-    summary: "키로거 방지 보안 가상 키패드",
+    subtitle: "키로거 방지 보안 가상 키패드",
+    summary: "요약입니두~",
     isMain: true,
     techStack: [
       {
@@ -64,7 +65,8 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "PowerWinup",
-    summary: "자산관리 및 윈도우 업데이트 제어",
+    subtitle: "자산관리 및 윈도우 업데이트 제어",
+    summary: "요약입니두~",
     isMain: true,
     techStack: [
       {
@@ -103,7 +105,8 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "SISU",
-    summary: "Django 활용 개인 블로그",
+    subtitle: "Django 활용 개인 블로그",
+    summary: "요약입니두~",
     isMain: true,
     techStack: [
       {
@@ -137,7 +140,8 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "카연갤 북마크",
-    summary: "무분별한 만화들을 수집 및 가공하여 보기 편하게 만들고 시리즈화 하는 웹서비스",
+    subtitle: "무분별한 만화들을 수집 및 가공하여 보기 편하게 만들고 시리즈화 하는 웹서비스",
+    summary: "요약입니두~",
     isMain: true,
     techStack: [
       {
@@ -184,7 +188,8 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "써브웨이 라벨 프린터",
-    summary: "써브웨이 재고 관리 도움",
+    subtitle: "써브웨이 재고 관리 도움",
+    summary: "요약입니두~",
     isMain: false,
     techStack: [
       {
@@ -207,7 +212,8 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "게임 개발 협업 툴",
-    summary: "게임 개발 협업 웹서비스",
+    subtitle: "게임 개발 협업 웹서비스",
+    summary: "요약입니두~",
     isMain: true,
     techStack: [
       {
@@ -237,7 +243,8 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "도전! 롤든벨",
-    summary: "리그 오브 레전드 실력 향상 퀴즈",
+    subtitle: "리그 오브 레전드 실력 향상 퀴즈",
+    summary: "요약입니두~",
     isMain: true,
     techStack: [
       {
@@ -292,7 +299,8 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "TJ 미디어 코인 노래방 노래 유튜브 자동 업로드",
-    summary: "mp3 노래들을 한대 묶어서 영상화 하고 유튜브에 자동으로 업로드해줍니다.",
+    subtitle: "mp3 노래들을 한대 묶어서 영상화 하고 유튜브에 자동으로 업로드해줍니다.",
+    summary: "요약입니두~",
     isMain: false,
     techStack: [
       {
@@ -311,7 +319,8 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "블랙박스 시간 설정 후처리",
-    summary: "블랙박스 영상의 시간 설정을 편하게 해주는 파이썬 앱",
+    subtitle: "블랙박스 영상의 시간 설정을 편하게 해주는 파이썬 앱",
+    summary: "요약입니두~",
     isMain: false,
     techStack: [
       {
