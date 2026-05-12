@@ -27,8 +27,7 @@ function App() {
     <div>
       <div>
         할일: 태그들에 아이콘 및 색상 추가?, 선택된 타입에 맟게 features 정렬 다시
-        Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
-        git config user.email "tesv010615@naver.com";git config user.name "sisu-01"
+        Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process;git config user.email "tesv010615@naver.com";git config user.name "sisu-01"
       </div>
       <Profile />
       <CategoryToggle getCategories={getCategories} setCategories={setCategories} />
