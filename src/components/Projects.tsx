@@ -9,10 +9,6 @@ interface ProjectsProps {
   getCategories: Type[];
 }
 
-/**
-git config user.email "tesv010615@naver.com" && git config user.name "sisu-01"
- */
-
 const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
   return (
     <div className={styles.container}>

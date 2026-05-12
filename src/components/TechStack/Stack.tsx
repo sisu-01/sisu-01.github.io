@@ -1,6 +1,7 @@
 import type { StackDetail, Type } from "../../types";
 
 import styles from "./Stack.module.css";
+import StackItem from "./StackItem";
 
 interface TechStackProps {
   techStack: StackDetail[];
@@ -17,8 +18,7 @@ const TechStack = ({ techStack, getCategories }: TechStackProps) => {
             <ul className={styles.container}>
               {stack.contents.map((content) => (
                 <li key={content.features} className={styles.item}>
-                  <h3>{content.features}</h3>
-                  <h6>{content.description}</h6>
+                  <StackItem key={content.features} contents={content} />
                 </li>
               ))}
             </ul>
