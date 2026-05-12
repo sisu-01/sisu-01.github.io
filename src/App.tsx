@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.css'; // 1. 일반 CSS 임포트로 변경
-import CategoryToggle from './components/CategoryToggle';
-import Projects from './components/Projects';
+import CategoryToggle from './components/Projects/CategoryToggle';
 import { PROJECTS } from './ts/projects';
 import type { ProjectType, Type } from './ts/types';
-import Profile from './components/Profile';
+import Profile from './components/Profile/Profile';
+import Projects from './components/Projects/Projects';
 
 const getProjectList = (project: ProjectType[]) => {
   const mainList = [];

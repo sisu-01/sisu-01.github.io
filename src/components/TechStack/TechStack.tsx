@@ -1,6 +1,6 @@
 import type { StackDetail, Type } from "../../ts/types";
 
-import styles from "./Stack.module.css";
+import styles from "./TechStack.module.css";
 import StackItem from "./StackItem";
 
 interface TechStackProps {

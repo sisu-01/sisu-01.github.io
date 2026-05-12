@@ -1,7 +1,7 @@
-import type { ProjectType, Type } from "../ts/types";
+import type { ProjectType, Type } from "../../ts/types";
+import Tags from "../TechStack/Tags";
+import TechStack from "../TechStack/TechStack";
 import styles from "./Projects.module.css";
-import Stack from "./TechStack/Stack";
-import Tags from "./TechStack/Tags";
 
 interface ProjectsProps {
   projects: ProjectType[];
@@ -19,7 +19,7 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
           <h5>{project.summary}</h5>
           <div>
             <Tags techStack={project.techStack} getCategories={getCategories} />
-            <Stack techStack={project.techStack} getCategories={getCategories} />
+            <TechStack techStack={project.techStack} getCategories={getCategories} />
             {project.etc}
           </div>
         </div>
