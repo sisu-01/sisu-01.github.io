@@ -1,4 +1,4 @@
-import type { ProjectType, Type } from "../types";
+import type { ProjectType, Type } from "../ts/types";
 import styles from "./Projects.module.css";
 import Stack from "./TechStack/Stack";
 import Tags from "./TechStack/Tags";

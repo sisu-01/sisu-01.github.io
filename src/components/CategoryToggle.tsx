@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import { CATEGORIES, type Type } from "../types";
+import { CATEGORIES, type Type } from "../ts/types";
 
 interface CategoryToggleProps {
   getCategories: Type[];

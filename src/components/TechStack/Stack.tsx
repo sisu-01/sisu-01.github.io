@@ -1,4 +1,4 @@
-import type { StackDetail, Type } from "../../types";
+import type { StackDetail, Type } from "../../ts/types";
 
 import styles from "./Stack.module.css";
 import StackItem from "./StackItem";

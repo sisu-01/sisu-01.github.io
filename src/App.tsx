@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './App.css'; // 1. 일반 CSS 임포트로 변경
 import CategoryToggle from './components/CategoryToggle';
 import Projects from './components/Projects';
-import { PROJECTS } from './projects';
-import type { ProjectType, Type } from './types';
+import { PROJECTS } from './ts/projects';
+import type { ProjectType, Type } from './ts/types';
 import Profile from './components/Profile';
 
 const getProjectList = (project: ProjectType[]) => {
@@ -26,7 +26,7 @@ function App() {
   return (
     <div>
       <div>
-        할일: 태그들에 아이콘 및 색상 추가?, 선택된 타입에 맟게 features 정렬 다시
+        할일: 선택된 타입에 맟게 features 정렬 다시
         Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process;git config user.email "tesv010615@naver.com";git config user.name "sisu-01"
       </div>
       <Profile />

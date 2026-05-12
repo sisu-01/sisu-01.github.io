@@ -10,7 +10,7 @@ export const PROJECTS: ProjectType[] = [
     techStack: [
       {
         type: "프론트엔드",
-        tags: ["HTML", "CSS", "JavaScript"],
+        tags: ["HTML5", "CSS", "JavaScript"],
         contents: [
           {
             features: "키보드 대신 마우스로 입력하는 가상 키패드 구현",
@@ -69,7 +69,7 @@ export const PROJECTS: ProjectType[] = [
     techStack: [
       {
         type: "프론트엔드",
-        tags: ["HTML", "CSS", "JavaScript"],
+        tags: ["HTML5", "CSS", "JavaScript"],
         contents: [
           {
             features: "관리자 페이지 대시보드 구현",
@@ -89,7 +89,7 @@ export const PROJECTS: ProjectType[] = [
       },
       {
         type: "데브옵스",
-        tags: ["Linux", "Tomcat"],
+        tags: ["Linux", "ApacheTomcat"],
         contents: [
           {
             features: "네트워크 환경 구성",
@@ -108,7 +108,7 @@ export const PROJECTS: ProjectType[] = [
     techStack: [
       {
         type: "프론트엔드",
-        tags: ["HTML", "CSS", "JavaScript"],
+        tags: ["HTML5", "CSS", "JavaScript"],
         contents: []
       },
       {
@@ -142,7 +142,7 @@ export const PROJECTS: ProjectType[] = [
     techStack: [
       {
         type: "프론트엔드",
-        tags: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
+        tags: ["HTML5", "CSS", "JavaScript", "React", "Next.js"],
         contents: [
           {
             features: "SEO 최적화를 위한 React -> Next.js 마이그레이션",
@@ -189,7 +189,7 @@ export const PROJECTS: ProjectType[] = [
     techStack: [
       {
         type: "프론트엔드",
-        tags: ["HTML", "CSS", "JavaScript", "React"],
+        tags: ["HTML5", "CSS", "JavaScript", "React"],
         contents: [
           {
             features: "재고 관리용 라벨 프린터 웹 애플리케이션 개발",
@@ -212,7 +212,7 @@ export const PROJECTS: ProjectType[] = [
     techStack: [
       {
         type: "프론트엔드",
-        tags: ["HTML", "CSS", "JavaScript", "Next.js"],
+        tags: ["HTML5", "CSS", "JavaScript", "Next.js"],
         contents: [
           {
             features: "Drag & Drop을 활용한 직관적인 UI 구현",
@@ -242,7 +242,7 @@ export const PROJECTS: ProjectType[] = [
     techStack: [
       {
         type: "프론트엔드",
-        tags: ["HTML", "CSS", "TypeScript", "React", "Next.js"],
+        tags: ["HTML5", "CSS", "TypeScript", "React", "Next.js"],
         contents: [
           {
             features: "TypeScript 도입",

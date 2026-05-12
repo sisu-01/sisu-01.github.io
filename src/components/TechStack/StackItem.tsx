@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { StackDetail } from "../../types";
+import type { StackDetail } from "../../ts/types";
 
 import styles from "./StackItem.module.css";
 
