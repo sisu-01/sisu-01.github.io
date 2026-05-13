@@ -1,6 +1,6 @@
 /* Tags.module.css */
 .container { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: 0.5rem; }
-.typeWrapper { display: flex; flex-wrap: wrap; list-style: none; padding: 0; }
+.typeWrapper { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: 0.5rem; }
 .item { margin-bottom: 0.25rem; }
 
 .tag {

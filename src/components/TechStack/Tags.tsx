@@ -1,4 +1,3 @@
-import { TECH_BADGE_INFO } from "../../ts/badgeColors";
 import type { StackDetail, Type } from "../../ts/types";
 
 import styles from "./Tags.module.css";
