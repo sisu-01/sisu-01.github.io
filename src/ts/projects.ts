@@ -109,11 +109,11 @@ export const PROJECTS: ProjectType[] = [
     summary: "요약입니두~",
     isMain: true,
     techStack: [
-      // {
-      //   type: "프론트엔드",
-      //   tags: ["HTML5", "CSS", "JavaScript"],
-      //   contents: []
-      // },
+      {
+        type: "프론트엔드",
+        tags: ["HTML5", "CSS", "JavaScript"],
+        contents: []
+      },
       {
         type: "백엔드",
         tags: ["Python", "Django", "MariaDB"],
