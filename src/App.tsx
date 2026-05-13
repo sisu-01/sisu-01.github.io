@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css'; // 1. 일반 CSS 임포트로 변경
+import styles from './App.module.css'
 import CategoryToggle from './components/Projects/CategoryToggle';
 import { PROJECTS } from './ts/projects';
 import type { ProjectType, Type } from './ts/types';
