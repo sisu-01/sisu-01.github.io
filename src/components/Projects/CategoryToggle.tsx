@@ -1,5 +1,7 @@
+/* CategoryToggle.tsx */
 import type { Dispatch, SetStateAction } from "react";
 import { CATEGORIES, type Type } from "../../ts/types";
+import styles from './CategoryToggle.module.css';
 
 interface CategoryToggleProps {
   getCategories: Type[];
@@ -9,29 +11,31 @@ interface CategoryToggleProps {
 const CategoryToggle = ({ getCategories, setCategories }: CategoryToggleProps) => {
 
   const toggleCategory = (category: Type) => {
-    if (getCategories.includes(category as Type)) {
-      // 이미 있으면 제거 (끄기)
+    if (getCategories.includes(category)) {
       setCategories(getCategories.filter((c) => c !== category));
     } else {
-      // 없으면 추가 (켜기)
-      setCategories([...getCategories, category as Type]);
+      setCategories([...getCategories, category]);
     }
   };
 
   return (
-    <div>
-      {CATEGORIES.map((cat) => (
-        <button
-          key={cat}
-          onClick={() => toggleCategory(cat)}
-          style={{
-            backgroundColor: getCategories.includes(cat) ? "#3B82F6" : "#E5E7EB",
-            color: getCategories.includes(cat) ? "white" : "black",
-          }}
-        >
-          {cat}
-        </button>
-      ))}
+    <div className={styles.container}>
+      <span className={styles.label}>Filter by:</span>
+      <div className={styles.buttonGroup}>
+        {CATEGORIES.map((cat) => {
+          const isActive = getCategories.includes(cat);
+          return (
+            <button
+              key={cat}
+              onClick={() => toggleCategory(cat)}
+              className={`${styles.toggleBtn} ${isActive ? styles.active : ''}`}
+            >
+              {cat}
+              {isActive && <i className="fas fa-check ml-1 text-[10px]"></i>}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };

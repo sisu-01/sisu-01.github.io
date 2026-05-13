@@ -1,3 +1,4 @@
+/* Projects.tsx */
 import type { ProjectType, Type } from "../../ts/types";
 import Tags from "../TechStack/Tags";
 import TechStack from "../TechStack/TechStack";
@@ -11,21 +12,29 @@ interface ProjectsProps {
 
 const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
   return (
-    <div className={styles.container}>
+    <div className={isMain ? styles.mainGrid : styles.sideGrid}>
       {projects.map((project) => (
-        <div key={project.title} className={`${styles.wrapper} ${isMain ? styles.isMain : styles.isSide}`}>
-          <div className={styles.link}>{project.repoUrl && (<a href={project.repoUrl} target="_blank" rel="noopener noreferrer">링크</a>)}</div>
-          <div className={styles.title}>
-            <h2>{project.title}</h2>
-            <h5>{project.subtitle}</h5>
+        <div key={project.title} className={styles.card}>
+          {/* 헤더 영역: 제목과 깃허브 아이콘이 양 옆으로 배치됨 */}
+          <div className={styles.cardHeader}>
+            <div className={styles.titleArea}>
+              <h4>{project.title}</h4>
+              <p className={styles.subtitle}>{project.subtitle}</p>
+            </div>
+            {/* 이 부분이 우측 상단에 위치하게 됩니다 */}
+            {project.repoUrl && (
+              <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className={styles.githubIcon}>
+                <i className="fab fa-github"></i>
+              </a>
+            )}
           </div>
-          <div>{project.summary}</div>
-          <div>
-            <div>주요 기술</div>
+          
+          <div className={styles.summary}>{project.summary}</div>
+          
+          <div className={styles.content}>
             <Tags techStack={project.techStack} getCategories={getCategories} />
-            <hr />
+            <div className={styles.divider}></div>
             <TechStack techStack={project.techStack} getCategories={getCategories} />
-            {project.etc}
           </div>
         </div>
       ))}

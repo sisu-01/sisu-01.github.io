@@ -1,39 +1,29 @@
+/* StackItem.module.css */
 .accordionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  padding: 10px 10px;
+  padding: 0.25rem 0;
 }
 
-.accordionHeader h3 {
-  margin: 0;
-}
+.accordionHeader h3 { font-size: 0.875rem; font-weight: 600; color: var(--slate-700); margin: 0; }
 
-/* 화살표 스타일 및 회전 애니메이션 */
-.arrow {
-  font-size: 0.8rem;
-  transition: transform 0.3s ease;
-}
+.arrow { font-size: 0.6rem; transition: transform 0.3s; color: var(--slate-400); }
+.arrowOpen { transform: rotate(180deg); }
 
-.arrowOpen {
-  transform: rotate(180deg);
-}
-
-/* 아코디언 콘텐츠 기본 상태 (숨김) */
 .accordionContent {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 10px;
+  transition: max-height 0.3s ease-out, margin 0.3s;
 }
 
-/* 아코디언 콘텐츠 열림 상태 */
-.contentOpen {
-  max-height: 200px; /* 내용이 충분히 들어갈 수 있는 넉넉한 높이 지정 */
-  padding: 10px 10px;
-}
+.contentOpen { max-height: 200px; margin-top: 0.5rem; }
 
 .accordionContent h6 {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--slate-500);
+  line-height: 1.4;
   margin: 0;
 }

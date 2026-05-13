@@ -1,30 +1,21 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-.typeWrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-.active > ul > li {
-  border: 5px solid gold;
-}
-.item {
-  display: flex;
-}
+/* Tags.module.css */
+.container { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: 0.5rem; }
+.typeWrapper { display: flex; flex-wrap: wrap; list-style: none; padding: 0; }
+.item { margin-bottom: 0.25rem; }
+
 .tag {
-  border: 1px solid white;
-  border-radius: 30px;  
-  background-color: white;
-  padding: 5px;
-  color: black;
-  font-size: 0.8rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: #f1f5f9;
+  color: #475569;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s;
 }
-.badge {
-  height: 1.5rem;
+
+/* 카테고리 선택 시 하이라이트 효과 */
+.active .tag {
+  background-color: var(--slate-800);
+  color: white;
 }

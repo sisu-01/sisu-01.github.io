@@ -1,0 +1,65 @@
+/* CategoryToggle.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--slate-600);
+  margin-right: 0.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.toggleBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px; /* Pill style */
+  border: 1px solid var(--slate-200);
+  background-color: white;
+  color: var(--slate-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.toggleBtn:hover {
+  border-color: var(--slate-400);
+  background-color: var(--slate-50);
+}
+
+/* 활성화 상태 (Active) */
+.active {
+  background-color: var(--slate-800);
+  border-color: var(--slate-800);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.active:hover {
+  background-color: #0f172a; /* 더 짙은 슬레이트 */
+  border-color: #0f172a;
+}
+
+/* FontAwesome 아이콘 간격용 (선택사항) */
+:global(.ml-1) {
+  margin-left: 0.35rem;
+}

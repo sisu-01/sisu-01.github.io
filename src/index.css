@@ -1,11 +1,26 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+
 :root {
-  --color-프론트엔드: red;
-  --color-백엔드: green;
-  --color-데브옵스: purple;
+  --color-프론트엔드: #ef4444; /* red-500 */
+  --color-백엔드: #22c55e;    /* green-500 */
+  --color-데브옵스: #a855f7;  /* purple-500 */
+  --slate-50: #f8fafc;
+  --slate-200: #e2e8f0;
+  --slate-400: #94a3b8;
+  --slate-600: #475569;
+  --slate-800: #1e293b;
+  --blue-600: #2563eb;
 }
+
 body {
   margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  background-color: var(--slate-50);
+  color: var(--slate-800);
+  -webkit-font-smoothing: antialiased;
 }
+
 ul {
   list-style: none;
   margin: 0;

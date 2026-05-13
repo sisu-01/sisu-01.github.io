@@ -1,30 +1,117 @@
+/* Projects.module.css */
+
 .container {
+  width: 100%;
+}
+
+/* 메인 프로젝트 그리드 (2열) */
+.mainGrid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12개의 동일한 비율 컬럼 */
-  align-items: start;
-  gap: 10px; /* 컬럼 사이 간격 */
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
-.wrapper {
-  grid-column: span 6;
-  border-radius: 15px;
-  padding: 10px;
-  color: black;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  background-color: white!important;
+
+@media (min-width: 768px) {
+  .mainGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
-.isMain {
-  background-color: rgb(202, 178, 178);
+
+/* 사이드 프로젝트 그리드 (3열) */
+.sideGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
-.isSide {
-  background-color: rgb(47, 83, 43);
+
+@media (min-width: 768px) {
+  .sideGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
-.link {
-  float: right;
-}
-.title {
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--slate-200);
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
 }
-h2, h5 {
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 아이콘 위치의 핵심: Header */
+.cardHeader {
+  display: flex;
+  justify-content: space-between; /* 양 끝 정렬 */
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.titleArea {
+  flex: 1; /* 제목이 가변적으로 공간 차지 */
+}
+
+.titleArea h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
   margin: 0;
+  color: var(--slate-800);
+}
+
+.subtitle {
+  color: var(--blue-600);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* 우측 상단 깃허브 아이콘 */
+.githubIcon {
+  color: var(--slate-400);
+  font-size: 1.5rem; /* 아이콘 크기 확보 */
+  margin-left: 1rem;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.githubIcon:hover {
+  color: var(--slate-800);
+}
+
+.summary {
+  font-size: 0.95rem;
+  color: var(--slate-600);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.content {
+  margin-top: auto; /* 하단 내용 아래로 밀착 */
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--slate-100);
+  margin: 1.25rem 0;
+}
+
+/* 추가 레이아웃 제어 */
+.isMain {
+  /* 필요 시 메인 카드 전용 스타일 추가 */
+}
+
+.isSide {
+  /* 필요 시 사이드 카드 전용 스타일 추가 */
 }

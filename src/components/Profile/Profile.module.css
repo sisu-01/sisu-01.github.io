@@ -1,0 +1,22 @@
+/* Profile.module.css */
+.hero { margin-bottom: 5rem; text-align: left; }
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--slate-800);
+}
+
+@media (min-width: 768px) { .title { font-size: 3.5rem; } }
+
+.description {
+  font-size: 1.125rem;
+  color: var(--slate-600);
+  max-width: 42rem;
+  line-height: 1.6;
+}
+
+.mobileBr { display: block; }
+@media (min-width: 768px) { .mobileBr { display: none; } }
