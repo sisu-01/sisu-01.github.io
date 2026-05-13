@@ -10,9 +10,17 @@
   color: var(--slate-600);
 }
 
-/* 동적 보더 색상 (index.css 변수 활용) */
-:global(.프론트엔드) .category { border-left: 4px solid var(--color-프론트엔드); }
-:global(.백엔드) .category { border-left: 4px solid var(--color-백엔드); }
-:global(.데브옵스) .category { border-left: 4px solid var(--color-데브옵스); }
+.inactive {
+  opacity: 0.4;
+  filter: grayscale(0.5);
+}
+
+/* 선택된 카테고리: 강조 효과 */
+.active {
+  opacity: 1;
+  filter: grayscale(0);
+  background-color: rgba(var(--highlight-rgb), 0.05); /* 강조 배경색 */
+  transform: translateX(5px); /* 살짝 튀어나오는 효과 (선택사항) */
+}
 
 .item { margin-bottom: 0.75rem; }
