@@ -57,8 +57,12 @@ const TechStack = ({ techStack, getCategories }: TechStackProps) => {
               }}
               className={styles.stackSection}
             >
-              <div className={styles.category} style={{ borderLeft: `var(--color-${stack.type}) 5px solid` }}>
-                {stack.type}
+              <div className={styles.categoryWrapper}>
+                <div className={styles.categoryLine} style={{ backgroundColor: `var(--color-${stack.type})` }}>
+                </div>
+                <div className={styles.category}>
+                  {stack.type}
+                </div>
               </div>
               <ul className={styles.contentList}>
                 {stack.contents.map((content) => (
