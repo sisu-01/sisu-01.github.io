@@ -6,6 +6,7 @@ import type { ProjectType, Type } from './ts/types';
 import Profile from './components/Profile/Profile';
 import Projects from './components/Projects/Projects';
 import CategoryToggle from './components/Projects/CategoryToggle';
+import TagChart from './components/Projects/TagChart';
 
 const getProjectList = (project: ProjectType[]) => {
   const mainList = project.filter(p => p.isMain);
@@ -33,6 +34,7 @@ function App() {
 
       <main className={styles.main}>
         <Profile />
+        <TagChart />
         <CategoryToggle getCategories={getCategories} setCategories={setCategories} />
         
         <section id="main-projects" className={styles.section}>
