@@ -16,6 +16,8 @@ const getProjectList = (project: ProjectType[]) => {
 function App() {
   const projectList = getProjectList(PROJECTS);
   const [getCategories, setCategories] = useState<Type[]>([]);
+
+  // Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process;git config user.email "tesv010615@naver.com";git config user.name "sisu-01"
   
   return (
     <div className={styles.app}>
