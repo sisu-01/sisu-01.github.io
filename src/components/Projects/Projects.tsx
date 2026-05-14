@@ -36,6 +36,7 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
             <div className={styles.divider}></div>
             <TechStack techStack={project.techStack} getCategories={getCategories} />
           </div>
+          <div className={styles.etc}>{project.etc}</div>
         </div>
       ))}
     </div>

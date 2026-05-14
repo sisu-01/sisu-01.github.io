@@ -107,11 +107,27 @@
   margin: 1.25rem 0;
 }
 
-/* 추가 레이아웃 제어 */
-.isMain {
-  /* 필요 시 메인 카드 전용 스타일 추가 */
+
+.etc {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  
+  /* 부드러운 배경색과 테두리로 강조 구역 설정 */
+  background-color: var(--slate-50, #f8fafc); 
+  border-left: 3px solid var(--slate-300, #cbd5e1);
+  border-radius: 0 6px 6px 0;
+  
+  /* 텍스트 스타일 */
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--slate-600, #475569);
+  
+  /* 텍스트가 여러 줄이 되어도 자연스럽게 처리 */
+  word-break: keep-all; 
+  white-space: pre-wrap; /* 줄바꿈(\n)이나 띄어쓰기 유지 */
 }
 
-.isSide {
-  /* 필요 시 사이드 카드 전용 스타일 추가 */
+/* 데이터가 없는 경우를 대비한 최적화 (선택사항) */
+.etc:empty {
+  display: none;
 }
