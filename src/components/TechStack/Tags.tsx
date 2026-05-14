@@ -1,6 +1,6 @@
 import type { StackDetail, Type } from "../../ts/types";
-import * as icons from "simple-icons"; // 1. simple-icons 패키지 전체 import
-import type {SimpleIcon} from 'simple-icons';
+// import * as icons from "simple-icons"; // 1. simple-icons 패키지 전체 import
+// import type {SimpleIcon} from 'simple-icons';
 
 
 import styles from "./Tags.module.css";
