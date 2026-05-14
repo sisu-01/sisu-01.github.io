@@ -36,10 +36,8 @@ const Tags = ({ techStack, getCategories }: TagsProps) => {
                 // 3. tag 이름을 simple-icons의 PascalCase Key 형식으로 변환
                 // 예: 'React' -> 'siReact', 'TypeScript' -> 'siTypescript'
                 const targetSlug = EXCEPTION_SLUGS[tag] || tag.toLowerCase().replace(/\./g, "dot").replace(/[^a-z0-9]/g, "");
-                const iconKey = `si${targetSlug.charAt(0).toUpperCase() + targetSlug.slice(1)}`;
-                
-                // 4. 패키지에서 아이콘 객체 조회 (타입 단언 추가)
-                const iconData = (icons as Record<string, SimpleIcon>)[iconKey];
+                // const iconKey = `si${targetSlug.charAt(0).toUpperCase() + targetSlug.slice(1)}`;
+                // const iconData = (icons as Record<string, SimpleIcon>)[iconKey];
 
                 return (
                   <li key={tag} className={styles.item}>
@@ -52,11 +50,11 @@ const Tags = ({ techStack, getCategories }: TagsProps) => {
                       />
                       {tag}
                     </span>
-                    <img
+                    {/* <img
                       src={`https://img.shields.io/badge/${encodeURIComponent(tag)}-${iconData?.hex || "111111"}?&logo=${targetSlug}&logoColor=white`}
                       className={styles.badge}
                       alt={`${tag} badge`}
-                    />
+                    /> */}
                   </li>
                 );
               })}
