@@ -1,5 +1,7 @@
 import type { StackDetail, Type } from "../../ts/types";
 import * as icons from "simple-icons"; // 1. simple-icons 패키지 전체 import
+import type {SimpleIcon} from 'simple-icons';
+
 
 import styles from "./Tags.module.css";
 
@@ -37,7 +39,7 @@ const Tags = ({ techStack, getCategories }: TagsProps) => {
                 const iconKey = `si${targetSlug.charAt(0).toUpperCase() + targetSlug.slice(1)}`;
                 
                 // 4. 패키지에서 아이콘 객체 조회 (타입 단언 추가)
-                const iconData = (icons as any)[iconKey];
+                const iconData = (icons as Record<string, SimpleIcon>)[iconKey];
 
                 return (
                   <li key={tag} className={styles.item}>
