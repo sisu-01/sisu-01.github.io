@@ -1,4 +1,4 @@
-import type { StackDetail, Type } from "../../ts/types";
+import { EXCEPTION_SLUGS, type StackDetail, type Type } from "../../ts/types";
 // import * as icons from "simple-icons"; // 1. simple-icons 패키지 전체 import
 // import type {SimpleIcon} from 'simple-icons';
 
@@ -9,15 +9,6 @@ interface TagsProps {
   techStack: StackDetail[];
   getCategories: Type[];
 }
-
-// 2. simple-icons와 이름이 매칭되지 않는 예외 케이스 처리 매핑 테이블
-// 패키지 내부 규칙(예: 'C++' -> 'siCplusplus', 'Node.js' -> 'siNodedotjs')을 맞추기 위함입니다.
-const EXCEPTION_SLUGS: Record<string, string> = {
-  "HTML": "html5",
-  "Java": "openjdk",
-  "WebSocket": "socketdotio",
-  // 필요한 예외가 있다면 여기에 추가하세요!
-};
 
 const Tags = ({ techStack, getCategories }: TagsProps) => {
   const tags: Partial<Record<Type, string[]>> = {};

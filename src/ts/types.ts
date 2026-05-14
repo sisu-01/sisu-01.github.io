@@ -17,3 +17,9 @@ export type ProjectType = {
   etc: string;
   repoUrl: string;
 }
+export const EXCEPTION_SLUGS: Record<string, string> = {
+  "HTML": "html5",
+  "Java": "openjdk",
+  "WebSocket": "socketdotio",
+  // 필요한 예외가 있다면 여기에 추가하세요!
+};
