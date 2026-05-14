@@ -1,4 +1,4 @@
-export const CATEGORIES = ["프론트엔드", "백엔드", "데브옵스"] as const;
+export const CATEGORIES = ["프론트엔드", "백엔드", "인프라"] as const;
 export type Type = (typeof CATEGORIES)[number];
 export type StackDetail = {
   type: Type;

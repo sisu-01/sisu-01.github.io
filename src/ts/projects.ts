@@ -46,7 +46,7 @@ export const PROJECTS: ProjectType[] = [
         ]
       },
       {
-        type: "데브옵스",
+        type: "인프라",
         tags: ["Linux", "Apache"],
         contents: [
           {
@@ -90,7 +90,7 @@ export const PROJECTS: ProjectType[] = [
         ]
       },
       {
-        type: "데브옵스",
+        type: "인프라",
         tags: ["Linux", "ApacheTomcat"],
         contents: [
           {
@@ -125,7 +125,7 @@ export const PROJECTS: ProjectType[] = [
         ]
       },
       {
-        type: "데브옵스",
+        type: "인프라",
         tags: ["Linux", "Nginx", "Docker"],
         contents: [
           {
@@ -169,7 +169,7 @@ export const PROJECTS: ProjectType[] = [
         ]
       },
       {
-        type: "데브옵스",
+        type: "인프라",
         tags: ["Linux", "Docker", "Vercel"],
         contents: [
           {
@@ -236,7 +236,7 @@ export const PROJECTS: ProjectType[] = [
           }
         ]
       },
-      {type: "데브옵스", tags: ["Vercel"], contents: []}
+      {type: "인프라", tags: ["Vercel"], contents: []}
     ],
     etc: "처음으로 팀 프로젝트를 해봤는데, 기획자 만들어준 디자인, 기능만 개발하면서 보완 사항 건의하고 추가하는 이 흐름이 참 좋았다. 기획 안 하고 개발에만 집중하니까 능률 ㅆㅅㅌㅊ?",
     repoUrl: "https://github.com/sisu-01/game-dev-coop"
@@ -280,7 +280,7 @@ export const PROJECTS: ProjectType[] = [
         ]
       },
       {
-        type: "데브옵스",
+        type: "인프라",
         tags: ["Linux", "Docker"],
         contents: [
           {
