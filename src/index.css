@@ -13,6 +13,10 @@
   --blue-600: #2563eb;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Pretendard', sans-serif;
