@@ -14,8 +14,6 @@ const EXCEPTION_SLUGS: Record<string, string> = {
   "HTML": "html5",
   "Java": "openjdk",
   "WebSocket": "socketdotio",
-  "Node.js": "nodedotjs",
-  "Next.js": "nextdotjs",
   // 필요한 예외가 있다면 여기에 추가하세요!
 };
 
@@ -35,7 +33,7 @@ const Tags = ({ techStack, getCategories }: TagsProps) => {
               {value?.map((tag) => {
                 // 3. tag 이름을 simple-icons의 PascalCase Key 형식으로 변환
                 // 예: 'React' -> 'siReact', 'TypeScript' -> 'siTypescript'
-                const targetSlug = EXCEPTION_SLUGS[tag] || tag.toLowerCase().replace(/[^a-z0-9]/g, "");
+                const targetSlug = EXCEPTION_SLUGS[tag] || tag.toLowerCase().replace(/\./g, "dot").replace(/[^a-z0-9]/g, "");
                 const iconKey = `si${targetSlug.charAt(0).toUpperCase() + targetSlug.slice(1)}`;
                 
                 // 4. 패키지에서 아이콘 객체 조회 (타입 단언 추가)
