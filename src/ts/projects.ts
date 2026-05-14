@@ -60,7 +60,7 @@ export const PROJECTS: ProjectType[] = [
         ]
       }
     ],
-    etc: "",
+    etc: "첫 담당 프로젝트, 이론만 아는 상태로 구르면서 급성장 끼요옷",
     repoUrl: ""
   },
   {
