@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import type { ChartOptions } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { PROJECTS } from "../../ts/projects";
 import styles from "./TagChart.module.css"; // CSS 모듈 임포트
@@ -59,7 +60,7 @@ const TagChart = () => {
     };
   }, []);
 
-  const options = {
+  const options: ChartOptions<"doughnut"> = {
     responsive: true,
     maintainAspectRatio: false,
     cutout: "70%", // 도넛을 더 얇고 세련되게 설정
@@ -73,7 +74,7 @@ const TagChart = () => {
           font: {
             size: 13,
             family: "'Pretendard', sans-serif",
-            weight: "600" as const,
+            weight: 600,
           },
           padding: 20,
         },
