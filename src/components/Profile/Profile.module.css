@@ -1,22 +1,119 @@
 /* Profile.module.css */
-.hero { margin-bottom: 5rem; text-align: left; }
+.hero {
+  margin-bottom: 5rem;
+  padding: 2rem 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* 텍스트 스타일 정의 */
+.textContent {
+  flex: 1.2;
+}
 
 .title {
-  font-size: 2.5rem;
+  font-size: 3rem; /* md:text-5xl 상당 */
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  color: var(--slate-800);
+  line-height: 1.25;
+  color: #0f172a; /* slate-900 */
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
 }
 
-@media (min-width: 768px) { .title { font-size: 3.5rem; } }
+/* '가치를 만드는 개발자' 부분에 그라데이션 포인트 추가 가능 (선택) */
+/*
+.title {
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+*/
 
 .description {
-  font-size: 1.125rem;
-  color: var(--slate-600);
-  max-width: 42rem;
-  line-height: 1.6;
+  font-size: 1.125rem; /* text-lg */
+  color: #475569; /* slate-600 */
+  line-height: 1.75;
+  margin: 0;
+  word-break: keep-all;
 }
 
-.mobileBr { display: block; }
-@media (min-width: 768px) { .mobileBr { display: none; } }
+/* 프로필 이미지 스타일 정의 */
+.imageContent {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 2rem; /* 부드러운 라운딩 */
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0; /* slate-200 */
+}
+
+/* 이미지 뒤에 은은한 배경 포인트를 주고 싶을 때 사용 */
+.imageWrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(99, 102, 241, 0.05));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 비율 깨짐 없이 꽉 차도록 */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .profileImage {
+  transform: scale(1.03); /* 은은한 호버 이펙트 */
+}
+
+.mobileBr {
+  display: none;
+}
+
+/* 반응형 모바일 레이아웃 조정 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse; /* 모바일에서는 이미지가 위로 가거나, 아래로 가도록 설정 (현재는 텍스트가 위) */
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .textContent {
+    flex: unset;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .mobileBr {
+    display: block;
+  }
+
+  .imageContent {
+    flex: unset;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* 모바일에서는 원형으로 변경해도 세련되어 보입니다 */
+  }
+}
