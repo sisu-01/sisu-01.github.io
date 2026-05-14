@@ -10,17 +10,16 @@
   color: var(--slate-600);
 }
 
-.inactive {
-  opacity: 0.4;
-  filter: grayscale(0.5);
+/* 충돌 방지를 위해 기존의 transition 및 active, inactive 클래스 제거 */
+.stackSection {
+  margin-bottom: 1.5rem;
+  will-change: transform, opacity; /* 브라우저 최적화 힌트 제공 */
 }
 
-/* 선택된 카테고리: 강조 효과 */
-.active {
-  opacity: 1;
-  filter: grayscale(0);
-  background-color: rgba(var(--highlight-rgb), 0.05); /* 강조 배경색 */
-  transform: translateX(5px); /* 살짝 튀어나오는 효과 (선택사항) */
+.contentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .item { margin-bottom: 0.75rem; }
