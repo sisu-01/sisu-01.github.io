@@ -336,5 +336,25 @@ export const PROJECTS: ProjectType[] = [
     ],
     etc: "",
     repoUrl: "https://github.com/sisu-01/FineVu_TimeEditor"
+  },
+  {
+    title: "개인 포트폴리오 웹사이트",
+    subtitle: "개인 포트폴리오 웹사이트",
+    summary: "요약입니두~",
+    isMain: false,
+    techStack: [
+      {
+        type: "프론트엔드",
+        tags: ["HTML5", "CSS", "TypeScript", "React", "Vite"],
+        contents: [
+          {
+            features: "Vite로 React 프로젝트 설정",
+            description: "Vite를 사용하여 React 프로젝트를 설정하여 빠른 개발 환경을 구축했습니다."
+          }
+        ]
+      }
+    ],
+    etc: "",
+    repoUrl: "https://github.com/sisu-01/sisu-01.github.io"
   }
 ];
