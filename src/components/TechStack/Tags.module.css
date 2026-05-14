@@ -4,7 +4,9 @@
 .item { margin-bottom: 0.25rem; }
 
 .tag {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   padding: 0.25rem 0.5rem;
   background-color: #f1f5f9;
   color: #475569;

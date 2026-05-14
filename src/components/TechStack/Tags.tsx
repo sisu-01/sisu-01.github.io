@@ -1,3 +1,4 @@
+import { TECH_BADGE_INFO } from "../../ts/badgeColors";
 import type { StackDetail, Type } from "../../ts/types";
 
 import styles from "./Tags.module.css";
@@ -21,12 +22,15 @@ const Tags = ({ techStack, getCategories }: TagsProps) => {
             <ul className={styles.typeWrapper}>
               {value?.map((tag) => (
                 <li key={tag} className={styles.item}>
-                  <span className={styles.tag}>{tag}</span>
-                  {/* <img
+                  <span className={styles.tag}>
+                    <img src={`https://cdn.simpleicons.org/${TECH_BADGE_INFO[tag]?.logo || tag}/${TECH_BADGE_INFO[tag]?.color || '111111'}`} width="20" height="20" />
+                    {tag}
+                  </span>
+                  <img
                     src={`https://img.shields.io/badge/${tag}-${TECH_BADGE_INFO[tag]?.color || 'white'}?&logo=${TECH_BADGE_INFO[tag]?.logo || tag}&logoColor=white`} 
                     className={styles.badge}
                     alt={`${tag} badge`} 
-                  /> */}
+                  />
                 </li>
               ))}
             </ul>

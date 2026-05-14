@@ -1,5 +1,6 @@
+// https://simpleicons.org
 export const TECH_BADGE_INFO: Record<string, { color: string; logo: string }> = {
-  "HTML5": { color: "E34F26", logo: "html5" },
+  "HTML": { color: "E34F26", logo: "html5" },
   "CSS": { color: "1572B6", logo: "css" },
   "JavaScript": { color: "F7DF1E", logo: "javascript" },
   "TypeScript": { color: "3178C6", logo: "typescript" },
