@@ -1,5 +1,5 @@
-import { TECH_BADGE_INFO } from "../../ts/badgeColors";
 import type { StackDetail, Type } from "../../ts/types";
+import * as icons from "simple-icons"; // 1. simple-icons 패키지 전체 import
 
 import styles from "./Tags.module.css";
 
@@ -8,37 +8,64 @@ interface TagsProps {
   getCategories: Type[];
 }
 
+// 2. simple-icons와 이름이 매칭되지 않는 예외 케이스 처리 매핑 테이블
+// 패키지 내부 규칙(예: 'C++' -> 'siCplusplus', 'Node.js' -> 'siNodedotjs')을 맞추기 위함입니다.
+const EXCEPTION_SLUGS: Record<string, string> = {
+  "HTML": "html5",
+  "Java": "openjdk",
+  "WebSocket": "socketdotio",
+  "Node.js": "nodedotjs",
+  "Next.js": "nextdotjs",
+  // 필요한 예외가 있다면 여기에 추가하세요!
+};
+
 const Tags = ({ techStack, getCategories }: TagsProps) => {
   const tags: Partial<Record<Type, string[]>> = {};
   for (const s of techStack) {
     tags[s.type] = s.tags;
   }
+
   return (
     <ul className={styles.container}>
       {Object.entries(tags).map(([key, value]) => {
         const isActive = getCategories.includes(key as Type);
         return (
-          <li key={key} className={`${key} ${isActive ? styles.active : ''}`}>
+          <li key={key} className={`${key} ${isActive ? styles.active : ""}`}>
             <ul className={styles.typeWrapper}>
-              {value?.map((tag) => (
-                <li key={tag} className={styles.item}>
-                  <span className={styles.tag}>
-                    <img src={`https://cdn.simpleicons.org/${TECH_BADGE_INFO[tag]?.logo || tag}/${TECH_BADGE_INFO[tag]?.color || '111111'}`} width="20" height="20" />
-                    {tag}
-                  </span>
-                  <img
-                    src={`https://img.shields.io/badge/${tag}-${TECH_BADGE_INFO[tag]?.color || 'white'}?&logo=${TECH_BADGE_INFO[tag]?.logo || tag}&logoColor=white`} 
-                    className={styles.badge}
-                    alt={`${tag} badge`} 
-                  />
-                </li>
-              ))}
+              {value?.map((tag) => {
+                // 3. tag 이름을 simple-icons의 PascalCase Key 형식으로 변환
+                // 예: 'React' -> 'siReact', 'TypeScript' -> 'siTypescript'
+                const targetSlug = EXCEPTION_SLUGS[tag] || tag.toLowerCase().replace(/[^a-z0-9]/g, "");
+                const iconKey = `si${targetSlug.charAt(0).toUpperCase() + targetSlug.slice(1)}`;
+                
+                // 4. 패키지에서 아이콘 객체 조회 (타입 단언 추가)
+                const iconData = (icons as any)[iconKey];
+
+                return (
+                  <li key={tag} className={styles.item}>
+                    <span className={styles.tag}>
+                      <img
+                        src={`https://cdn.simpleicons.org/${targetSlug}`}
+                        width="20"
+                        height="20"
+                        alt={`${tag} icon`}
+                      />
+                      {tag}
+                    </span>
+                    <img
+                      src={`https://img.shields.io/badge/${encodeURIComponent(tag)}-${iconData?.hex || "111111"}?&logo=${targetSlug}&logoColor=white`}
+                      className={styles.badge}
+                      alt={`${tag} badge`}
+                    />
+                  </li>
+                );
+              })}
             </ul>
           </li>
-        )
+        );
       })}
-      </ul>
+    </ul>
   );
-}
+};
 
 export default Tags;

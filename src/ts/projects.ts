@@ -81,7 +81,7 @@ export const PROJECTS: ProjectType[] = [
       },
       {
         type: "백엔드",
-        tags: ["Java", "Spring", "Websocket", "MariaDB"],
+        tags: ["Java", "Spring", "WebSocket", "MariaDB"],
         contents: [
           {
             features: "WebSocket을 통한 실시간 데이터 전송",
