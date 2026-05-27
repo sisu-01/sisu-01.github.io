@@ -15,7 +15,7 @@ const StackItem = ({ contents }: StackItemProps) => {
   };
 
   return (
-    <li>
+    <>
       <div className={styles.accordionHeader} onClick={toggleHandler}>
         <h3>{contents.features}</h3>
         <span className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ""}`}>▼</span>
@@ -23,7 +23,7 @@ const StackItem = ({ contents }: StackItemProps) => {
       <div className={`${styles.accordionContent} ${isOpen ? styles.contentOpen : ""}`}>
         <h6>{contents.description}</h6>
       </div>
-    </li>
+    </>
   );
 }
 
