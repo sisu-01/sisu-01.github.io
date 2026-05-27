@@ -12,6 +12,7 @@ export type ProjectType = {
   title: string;
   subtitle: string;
   summary: string;
+  icon: string;
   isMain: boolean;
   techStack: StackDetail[];
   etc: string;
