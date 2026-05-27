@@ -1,3 +1,5 @@
+import type { IconProp } from "@fortawesome/fontawesome-svg-core";
+
 export const CATEGORIES = ["프론트엔드", "백엔드", "인프라"] as const;
 export type Type = (typeof CATEGORIES)[number];
 export type StackDetail = {
@@ -12,7 +14,7 @@ export type ProjectType = {
   title: string;
   subtitle: string;
   summary: string;
-  icon: string;
+  icon: IconProp;
   isMain: boolean;
   techStack: StackDetail[];
   etc: string;

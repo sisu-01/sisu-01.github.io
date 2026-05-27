@@ -4,6 +4,12 @@ import Tags from "../TechStack/Tags";
 import TechStack from "../TechStack/TechStack";
 import styles from "./Projects.module.css";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+library.add(fas, fab);
+
 interface ProjectsProps {
   projects: ProjectType[];
   isMain: boolean;
@@ -18,7 +24,9 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
           {/* 헤더 영역: 제목과 깃허브 아이콘이 양 옆으로 배치됨 */}
           <div className={styles.cardHeader}>
             <div className={styles.titleWrapper}>
-              <div className={styles.titleImg}>img</div>
+              <div className={styles.titleImg}>
+                <FontAwesomeIcon icon={project.icon} size="2x" />
+              </div>
               <div className={styles.titleArea}>
                 <h4>{project.title}</h4>
                 <p className={styles.subtitle}>{project.subtitle}</p>
