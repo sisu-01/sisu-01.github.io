@@ -13,6 +13,7 @@ export type StackDetail = {
 export type ProjectType = {
   title: string;
   subtitle: string;
+  images: string[];
   summary: string;
   icon: IconProp;
   isMain: boolean;
