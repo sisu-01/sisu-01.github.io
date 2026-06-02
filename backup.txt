@@ -1,0 +1,262 @@
+import type { ProjectType, Type } from "../../ts/types";
+import Tags from "../TechStack/Tags";
+import TechStack from "../TechStack/TechStack";
+import styles from "./Projects.module.css";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import Carousel from "./Carousel";
+library.add(fas, fab);
+
+interface ProjectsProps {
+  projects: ProjectType[];
+  isMain: boolean;
+  getCategories: Type[];
+}
+
+const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
+  return (
+    <div className={isMain ? styles.mainList : styles.sideList}>
+      {projects.map((project) => (
+        <div key={project.title} className={styles.card}>
+          {/* 1. 텍스트 카드 영역 (이제 왼쪽에 위치) */}
+          <div className={styles.textCard}>
+            <div className={styles.cardHeader}>
+              <div className={styles.titleWrapper}>
+                <div className={styles.titleImg}>
+                  <FontAwesomeIcon icon={project.icon} size="2x" />
+                </div>
+                <div className={styles.titleArea}>
+                  <h4>{project.title}</h4>
+                  <p className={styles.subtitle}>{project.subtitle}</p>
+                </div>
+              </div>
+              {/* 이 부분이 우측 상단에 위치하게 됩니다 */}
+              {project.repoUrl && (
+              <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className={styles.githubIcon}>
+                <i className="fab fa-github"></i>
+              </a>
+            )}
+            </div>
+
+            <div className={styles.detailsWrapper}>
+              <div className={styles.summary}>{project.summary}</div>
+              <div className={styles.content}>
+                <Tags techStack={project.techStack} getCategories={getCategories} />
+                <div className={styles.divider}></div>
+                <TechStack techStack={project.techStack} getCategories={getCategories} />
+              </div>
+              {project.etc && <div className={styles.etc}>{project.etc}</div>}
+            </div>
+          </div>
+
+          {/* 2. 캐러셀 영역 (이제 오른쪽에 위치) */}
+          <div className={styles.carouselWrapper}>
+            <Carousel images={project.images} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Projects;
+
+.container {
+  width: 100%;
+}
+
+.mainList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.sideList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 📱 모바일 기본: 전체를 감싸는 카드로 동작 */
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--slate-200);
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.selectedCard {
+  border-color: var(--blue-400);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌟 핵심: 모바일에선 textCard 껍데기를 없애서 자식들이 .card의 직접적인 flex 요소처럼 동작하게 함 */
+.textCard {
+  display: contents; 
+}
+
+/* 모바일 순서 지정 (1.헤더 -> 2.캐러셀 -> 3.디테일) */
+.cardHeader { order: 1; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; }
+.carouselWrapper { order: 2; margin-bottom: 1.5rem; width: 100%; }
+.detailsWrapper { order: 3; display: flex; flex-direction: column; height: 100%; }
+
+
+/* 💻 데스크탑 화면: 캐러셀과 텍스트 영역을 완벽히 분리 */
+/* 💻 데스크탑 화면: 캐러셀과 텍스트 영역을 완벽히 분리 */
+@media (min-width: 768px) {
+  .card {
+    display: grid;
+    /* 1. 비율은 그대로 [캐러셀 1 : 텍스트 카드 1.5] */
+    grid-template-columns: 1fr 1fr; 
+    gap: 2.5rem; 
+    align-items: stretch;
+    
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .carouselWrapper {
+    /* 🌟 핵심: grid-column 대신 order를 사용하여 첫 번째(왼쪽)로 강제 정렬 */
+    order: 1; 
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .textCard {
+    /* 🌟 핵심: order를 사용하여 두 번째(오른쪽)로 강제 정렬 */
+    order: 2; 
+    display: flex; 
+    flex-direction: column;
+    
+    background-color: white;
+    border-radius: 0.75rem;
+    border: 1px solid var(--slate-200);
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+  }
+
+  .textCard:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .selectedCard .textCard {
+    border-color: var(--blue-400);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .cardHeader {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* --- 이하 컴포넌트 내부 세부 스타일 (기존과 동일) --- */
+.titleWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.titleImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid var(--blue-600);
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+}
+
+.titleArea {
+  flex: 1;
+}
+
+.titleArea h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--slate-800);
+}
+
+.subtitle {
+  color: var(--blue-600);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.githubIcon {
+  color: var(--slate-400);
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.githubIcon:hover {
+  color: var(--slate-800);
+}
+
+.summary {
+  font-size: 0.95rem;
+  color: var(--slate-600);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.content {
+  margin-top: auto;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--slate-100);
+  margin: 1.25rem 0;
+}
+
+.etc {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--slate-50, #f8fafc); 
+  border-left: 3px solid var(--slate-300, #cbd5e1);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--slate-600, #475569);
+  word-break: keep-all; 
+  white-space: pre-wrap;
+}
+
+.etc:empty {
+  display: none;
+}
