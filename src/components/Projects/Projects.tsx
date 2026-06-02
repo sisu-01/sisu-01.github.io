@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import Carousel from "./Carousel";
 library.add(fas, fab);
 
 interface ProjectsProps {
@@ -39,6 +40,7 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
               </a>
             )}
           </div>
+          <Carousel images={project.images} />
           <div className={styles.summary}>{project.summary}</div>
           <div className={styles.content}>
             <Tags techStack={project.techStack} getCategories={getCategories} />
