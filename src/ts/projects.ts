@@ -4,32 +4,35 @@ import type { ProjectType } from "./types";
 export const PROJECTS: ProjectType[] = [
   {
     title: "PUBG 박격포 계산기",
-    subtitle: "초정밀 사격제원 산출 자동화 프로그램",
+    subtitle: "박격포 사격제원 산출 자동화 프로그램",
     images: [
       "/test/1.png",
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "인게임 지도 이미지 분석과 지형 데이터를 활용해 객체 간 수평 거리 및 고도차를 분석하고, 정밀 타격에 필요한 박격포 사격 제원을 자동으로 산출하는 프로그램",
     icon: ["fas", "bomb"],
     isMain: true,
     techStack: [
       {
         type: "백엔드",
-        tags: ["Python"],
+        tags: ["UnrealEngine", "OpenCV", "Python"],
         contents: [
           {
-            features: "언리얼 엔진 소스 역설계",
-            description: "맵의 고도 데이터(heightmap)파일 얻으려고 Python으로 소스 여차저차 뜯기"
+            features: "언리얼 엔진 바이너리 데이터 파싱",
+            description: "PUBG 맵 지형 데이터(heightmap)을 얻기 위해 언리얼 엔진 패키지의 메타데이터를 분석하여 파일을 추출"
           },
           {
             features: "OpenCV 활용 객체 탐지",
-            description: "플레이어의 색상을 마스크로 한정한 뒤 탬플릿 이미지를 통해 정확히 탐지"
+            description: "플레이어의 색상을 마스크로 한정한 뒤 탬플릿 이미지 매치, 이미지 비율 검증을 통해 객체 탐지"
           },
         ]
       }
     ],
-    etc: "내게 부족한 수학적 지식이나 알고리즘을 Ai가 도와줬다.\nAi의 강력함 느낌",
+    etc: "Ai의 도움을 많이 받은 프로젝트였다.\n" + 
+        "하지만 Ai는 결국 도구일 뿐, 개발의 방향성과 아이디어는 개발자의 몫임을 느꼈다.\n\n" +
+        "Ai가 해준 것들\n" + 
+        "1. PUBG 인게임 박격포 탄속 역산하기\n2. 포진지와 표적지의 수평 거리와 고도차를 고려한 탄도학 공식 만들기\n3. OpenCV 기능 도움",
     repoUrl: "https://github.com/sisu-01/pubg-mortar-calc"
   },
   {
