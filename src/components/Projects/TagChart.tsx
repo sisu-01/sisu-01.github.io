@@ -21,7 +21,7 @@ const TagChart = () => {
     });
 
     const sortedEntries = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
-    const threshold = 2; // <- 기타로 들어가는 기준 값
+    const threshold = 1; // <- 기타로 들어가는 기준 값
     const mainTags = sortedEntries.filter(([_, count]) => count > threshold);
     const otherTags = sortedEntries.filter(([_, count]) => count <= threshold);
     const otherCount = otherTags.reduce((acc, [_, count]) => acc + count, 0);
