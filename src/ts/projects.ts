@@ -416,5 +416,35 @@ export const PROJECTS: ProjectType[] = [
     ],
     etc: "",
     repoUrl: "https://github.com/sisu-01/sisu-01.github.io"
+  },
+  {
+    title: "PUBG 박격포 계산기",
+    subtitle: "초정밀 사격제원 산출 자동화 프로그램",
+    images: [
+      "/test/1.png",
+      "/test/2.gif",
+      "/test/3.png",
+    ],
+    summary: "요약입니두~",
+    icon: ["fas", "bomb"],
+    isMain: true,
+    techStack: [
+      {
+        type: "백엔드",
+        tags: ["Python"],
+        contents: [
+          {
+            features: "언리얼 엔진 소스 역설계",
+            description: "맵의 고도 데이터(heightmap)파일 얻으려고 Python으로 소스 여차저차 뜯기"
+          },
+          {
+            features: "OpenCV 활용 객체 탐지",
+            description: "플레이어의 색상을 마스크로 한정한 뒤 탬플릿 이미지를 통해 정확히 탐지"
+          },
+        ]
+      }
+    ],
+    etc: "내게 부족한 수학적 지식이나 알고리즘을 Ai가 도와줬다.\nAi의 강력함 느낌",
+    repoUrl: "https://github.com/sisu-01/pubg-mortar-calc"
   }
 ];
