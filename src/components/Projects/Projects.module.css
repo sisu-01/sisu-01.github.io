@@ -110,7 +110,7 @@
   font-size: 0.95rem;
   color: var(--slate-600);
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .content {
@@ -134,8 +134,8 @@
   border-radius: 0 6px 6px 0;
   
   /* 텍스트 스타일 */
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: var(--slate-600, #475569);
   
   /* 텍스트가 여러 줄이 되어도 자연스럽게 처리 */
