@@ -32,7 +32,7 @@ export const PROJECTS: ProjectType[] = [
     etc: "Ai의 도움을 많이 받은 프로젝트였다.\n" + 
         "하지만 Ai는 결국 도구일 뿐, 개발의 방향성과 아이디어는 개발자의 몫임을 느꼈다.\n\n" +
         "Ai가 해준 것들\n" + 
-        "1. PUBG 인게임 박격포 탄속 역산하기\n2. 포진지와 표적지의 수평 거리와 고도차를 고려한 탄도학 공식 만들기\n3. OpenCV 기능 도움",
+        "1. PUBG 인게임 박격포 탄속 역산하기\n2. 수평 거리와 고도차를 고려한 탄도학 공식 만들기\n3. OpenCV 기능 도움",
     repoUrl: "https://github.com/sisu-01/pubg-mortar-calc"
   },
   {
