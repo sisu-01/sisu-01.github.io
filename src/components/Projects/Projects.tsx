@@ -42,11 +42,13 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
           </div>
           <Carousel images={project.images} />
           <div className={styles.summary}>{project.summary}</div>
-          <div className={styles.content}>
-            <Tags techStack={project.techStack} getCategories={getCategories} />
-            <div className={styles.divider}></div>
-            <TechStack techStack={project.techStack} getCategories={getCategories} />
-          </div>
+          {project.techStack.length > 0 && (
+            <div className={styles.content}>
+              <Tags techStack={project.techStack} getCategories={getCategories} />
+              <div className={styles.divider}></div>
+              <TechStack techStack={project.techStack} getCategories={getCategories} />
+            </div>
+          )}
           <div className={styles.etc}>{project.etc}</div>
         </div>
       ))}
