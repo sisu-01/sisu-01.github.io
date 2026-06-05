@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
 
 :root {
-  --color-프론트엔드: #ef4444; /* red-500 */
-  --color-백엔드: #22c55e;    /* green-500 */
-  --color-인프라: #a855f7;  /* purple-500 */
+  --color-프론트엔드: #2563eb;
+  --color-백엔드: #abacac;
+  --color-인프라: #f59e0b;
   --slate-50: #f8fafc;
   --slate-200: #e2e8f0;
   --slate-400: #94a3b8;
