@@ -16,7 +16,7 @@ export const PROJECTS: ProjectType[] = [
     techStack: [
       {
         type: "백엔드",
-        tags: ["UnrealEngine", "OpenCV", "Python"],
+        tags: ["Python", "OpenCV", "UnrealEngine"],
         contents: [
           {
             features: "언리얼 엔진 바이너리 데이터 파싱",
@@ -24,13 +24,13 @@ export const PROJECTS: ProjectType[] = [
           },
           {
             features: "OpenCV 활용 객체 탐지",
-            description: "플레이어의 색상을 마스크로 한정한 뒤 탬플릿 이미지 매치, 이미지 비율 검증을 통해 객체 탐지"
+            description: "플레이어의 색상 기반 이진화 마스킹 후 탬플릿 이미지 매치, 이미지 비율 검증을 통해 객체 탐지"
           },
         ]
       }
     ],
     etc: "Ai의 도움을 많이 받은 프로젝트였다.\n" + 
-        "하지만 Ai는 결국 도구일 뿐, 개발의 방향성과 아이디어는 개발자의 몫임을 느꼈다.\n\n" +
+        "하지만 Ai는 결국 도구일 뿐, 개발의 방향성과 아이디어같은 설계 능력은 개발자의 몫임을 느꼈다.\n\n" +
         "Ai가 해준 것들\n" + 
         "1. PUBG 인게임 박격포 탄속 역산하기\n2. 수평 거리와 고도차를 고려한 탄도학 공식 만들기\n3. OpenCV 기능 도움",
     repoUrl: "https://github.com/sisu-01/pubg-mortar-calc"
@@ -62,55 +62,55 @@ export const PROJECTS: ProjectType[] = [
     repoUrl: "https://github.com/sisu-01/sisu-01.github.io"
   },
   {
-    title: "블랙박스 시간 설정 후처리",
-    subtitle: "블랙박스 영상의 시간 설정을 편하게 해주는 파이썬 앱",
+    title: "FineVu 시간 편집기",
+    subtitle: "블랙박스 녹화 영상 편집 프로그램",
     images: [
       "/test/1.png",
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "안전신문고에 블랙박스 영상 제출할 때, 영상 속 녹화 시간이 신고 시간과 다르면 신고가 접수되지 않아 제작한 프로그램",
     icon: ["fas", "video"],
     isMain: false,
     techStack: [
-      {
-        type: "백엔드",
-        tags: ["Python"],
-        contents: [
-          {
-            features: "Python을 활용한 시간 설정 후처리",
-            description: "블박 영상 속 시간과 신고 시간이 다르면 신고 안 받아줌.. 그래서 Python movie.py로 영상 속 시간 부분을 내 마음대로 편집해주는 읏"
-          }
-        ]
-      }
+      // {
+      //   type: "백엔드",
+      //   tags: ["Python"],
+      //   contents: [
+      //     {
+      //       features: "Python을 활용한 시간 설정 후처리",
+      //       description: "블랙박스 영상 속 시간과 신고 시간이 다르면 신고 안 받아줌.. 그래서 Python movie.py로 영상 속 시간 부분을 내 마음대로 편집해주는 읏"
+      //     }
+      //   ]
+      // }
     ],
-    etc: "",
+    etc: "100% Ai 제작",
     repoUrl: "https://github.com/sisu-01/FineVu_TimeEditor"
   },
   {
-    title: "TJ 미디어 코인 노래방 노래 유튜브 자동 업로드",
-    subtitle: "mp3 노래들을 한대 묶어서 영상화 하고 유튜브에 자동으로 업로드해줍니다.",
+    title: "노래방 유튜브 업로더",
+    subtitle: "TJ 미디어 녹음 파일 유튜브 업로더",
     images: [
       "/test/1.png",
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "오디오 파일명 ID 기반의 곡 정보 스크래핑, 비디오 인코딩 및 유튜브 업로드 자동화 프로그램",
     icon: ["fas", "microphone-lines"],
     isMain: false,
     techStack: [
-      {
-        type: "백엔드",
-        tags: ["Python"],
-        contents: [
-          {
-            features: "Python을 활용한 mp3 파일 처리 및 유튜브 업로드 자동화",
-            description: "moviePy랑 google 어쩌구 해서 연동 큭큭"
-          }
-        ]
-      }
+      // {
+      //   type: "백엔드",
+      //   tags: ["Python"],
+      //   contents: [
+      //     {
+      //       features: "Python을 활용한 mp3 파일 처리 및 유튜브 업로드 자동화",
+      //       description: "moviePy랑 google 어쩌구 해서 연동 큭큭"
+      //     }
+      //   ]
+      // }
     ],
-    etc: "",
+    etc: "100% Ai 제작",
     repoUrl: "https://github.com/sisu-01/TJ_Youtube_uploader"
   },
   {
@@ -121,7 +121,7 @@ export const PROJECTS: ProjectType[] = [
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "Google Adsense, H5 Game Adsense, SEO 최적화를 통해 수익 창출을 목표로 하는 완성된 웹 서비스 운영 프로젝트",
     icon: ["fas", "gamepad"],
     isMain: true,
     techStack: [
@@ -131,11 +131,11 @@ export const PROJECTS: ProjectType[] = [
         contents: [
           {
             features: "TypeScript 도입",
-            description: "다양한 경험을 위해 TypeScript 써봤는데 왜 쓰는지 알겠다. 그냥 안정성이 미쳤음."
+            description: "안정성 및 개발 유지보수 편이성을 위해 TypeScript를 도입했다. 결과는 놀라웠다. 왜 이제야 도입했나 싶을 정도로 개발이 편해졌다. Typescript가 대세인 이유가 있다."
           },
           {
             features: "useReducer를 활용한 상태 관리",
-            description: "원래 useState만 쓰다가 useReducer 써봤는데 개꿀 컄ㅋ 중앙에서 관리하는 편리 및 안정성 견고함"
+            description: "기존엔 useState로만 상태 관리를 했다가 useReducer의 존재를 알게되어 리팩토링을 했는데 정말 놀라웠다. 모든 상태 관리를 최상위에서 useReducer 하나로 관리하니 상태가 한눈에 들어오고, 상태 변경 로직도 한 곳에 모여있어서 유지보수가 정말 편해졌다. 상태가 복잡해질수록 useReducer의 진가가 발휘된다고 생각한다."
           },
         ]
       },
@@ -145,7 +145,7 @@ export const PROJECTS: ProjectType[] = [
         contents: [
           {
             features: "Redis 도입",
-            description: "다양한 경험을 위해 Redis 도입, 저장 필요 없는 매치업 데이터 보관 용이하고 불러오기도 빨라서 좋다."
+            description: "매치업 데이터는 영구 저장해야될 만큼 중요하지도 않고 빠르고 자주 불러와야 하니 메모리 기반의 Redis를 도입해서 빠르게 불러올 수 있도록 했다. 결과는 놀라웠다. 매치업 데이터 불러오는 속도가 엄청 빨라졌다. Redis는 정말 빠르다."
           },
           {
             features: "Python을 활용한 데이터 수집 및 처리",
@@ -163,7 +163,7 @@ export const PROJECTS: ProjectType[] = [
         contents: [
           {
             features: "무료 SSL 인증서 자동 인증",
-            description: "Let's Encrypt를 활용하여 무료 SSL 인증서를 자동으로 발급하고 갱신할 수 있도록 구현했습니다. 이 과정에서 CloudFlare DNS API를 활용"
+            description: "지금까지는 기관에서 SSL 인증서를 구입해서 사용했음. 하지만 이걸 알고 Let's Encrypt를 활용하여 무료 SSL 인증서를 자동으로 발급하고 갱신할 수 있도록 구현했습니다. 이 과정에서 CloudFlare DNS API를 활용"
           },
           {
             features: "Google Adsense 승인",
@@ -172,7 +172,7 @@ export const PROJECTS: ProjectType[] = [
         ]
       }
     ],
-    etc: "ai 이미지 개꿀 컄ㅋㅋ 디자이너 필요 없쥬? 근데 실패 ㅠㅠ 이유: 남자 놈들 타겟 게임 사이트 이런거 관심도 없다 이거야",
+    etc: "생성형 Ai 덕분에 디자이너 없이 고퀄리티의 이미지 소스로 제작 할 수 있었다.\n\n사용자들은 글을 잘 읽지 않는다. 설명글보다 명확한 UX가 중요하다는 것을 느꼈다.",
     repoUrl: "https://github.com/sisu-01/lol_nextjs"
   },
   {
@@ -209,7 +209,7 @@ export const PROJECTS: ProjectType[] = [
       },
       {type: "인프라", tags: ["Vercel"], contents: []}
     ],
-    etc: "처음으로 팀 프로젝트를 해봤는데, 기획자 만들어준 디자인, 기능만 개발하면서 보완 사항 건의하고 추가하는 이 흐름이 참 좋았다. 기획 안 하고 개발에만 집중하니까 능률 ㅆㅅㅌㅊ?",
+    etc: "처음으로 팀 프로젝트를 해봤는데, 기획자가 고안한 기능과 레이아웃만 보고 개발하면서 보완 사항 건의하고 추가하는 이 흐름이 참 좋았다. 구상은 기획자에게 맡기고 안 하고 개발에만 집중하니까 개발 속도가 빠름을 느꼈다.",
     repoUrl: "https://github.com/sisu-01/game-dev-coop"
   },
   {
@@ -222,7 +222,7 @@ export const PROJECTS: ProjectType[] = [
     ],
     summary: "요약입니두~",
     icon: ["fas", "print"],
-    isMain: false,
+    isMain: true,
     techStack: [
       {
         type: "프론트엔드",
@@ -230,7 +230,7 @@ export const PROJECTS: ProjectType[] = [
         contents: [
           {
             features: "재고 관리용 라벨 프린터 웹 애플리케이션 개발",
-            description: "기존 라벨 프린팅 시스템은 일일히 정보 기입, but 정보가 자동으로 기입, 버튼 클릭 몇 번 만으로 라벨이 프린팅 읏"
+            description: "매장에서 기존에 사용하던 라벨 프린팅 시스템은 일일히 정보 기입, but 내가 개발한 것은 정보가 자동으로 기입, print() 활용하여 버튼 클릭 몇 번 만으로 라벨이 프린팅 됨"
           },
           {
             features: "손 쉬운 유지보수를 위한 싱글 html 파일로 제작",
@@ -244,13 +244,13 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     title: "카연갤 북마크",
-    subtitle: "무분별한 만화들을 수집 및 가공하여 보기 편하게 만들고 시리즈화 하는 웹서비스",
+    subtitle: "아마추어 웹툰 플랫폼",
     images: [
       "/test/1.png",
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "무분별한 만화들을 수집 및 가공하여 보기 편하게 만들고 시리즈화 하는 웹서비스",
     icon: ["fas", "book-bookmark"],
     isMain: true,
     techStack: [
