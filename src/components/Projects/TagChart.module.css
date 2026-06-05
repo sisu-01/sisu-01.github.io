@@ -37,13 +37,21 @@
   flex-direction: column;
   gap: 12px;
 }
-
+.categoryWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.categoryLine {
+  width: 0.25rem;
+  height: 1.3rem;
+  border-radius: 0.25rem;
+}
 .categoryLabel {
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #334155; /* slate-700 */
-  border-left: 4px solid #2563eb;
-  padding-left: 8px;
 }
 
 .barAndLegendWrapper {

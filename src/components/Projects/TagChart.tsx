@@ -90,8 +90,10 @@ const TagChart = () => {
       <div className={styles.barChartContainer}>
         {categoryStats.map((category) => (
           <div key={category.type} className={styles.categoryRow}>
-            <div className={styles.categoryLabel}>{category.type}</div>
-
+            <div className={styles.categoryWrapper}>
+              <div className={styles.categoryLine} style={{ backgroundColor: `var(--color-${category.type})` }} />
+              <div className={styles.categoryLabel}>{category.type}</div>
+            </div>
             <div className={styles.barAndLegendWrapper}>
               <div className={styles.progressBarTrack}>
                 {category.skills.map((skill) => (
