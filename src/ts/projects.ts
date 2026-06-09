@@ -36,26 +36,26 @@ export const PROJECTS: ProjectType[] = [
     repoUrl: "https://github.com/sisu-01/pubg-mortar-calc"
   },
   {
-    title: "개인 포트폴리오 웹사이트",
-    subtitle: "개인 포트폴리오 웹사이트",
+    title: "포트폴리오",
+    subtitle: "프로젝트 정리 웹사이트",
     images: [
       "/test/1.png",
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "지금까지 진행했던 프로젝트들을 보기 좋게 나열한 사이트",
     icon: ["fas", "code"],
     isMain: false,
     techStack: [
       {
         type: "프론트엔드",
-        tags: [/*"HTML", "CSS", */"TypeScript", "React", "Vite"],
-        contents: [
-          {
-            features: "Vite로 React 프로젝트 설정",
-            description: "Vite를 사용하여 React 프로젝트를 설정하여 빠른 개발 환경을 구축했습니다."
-          }
-        ]
+        tags: [/*"HTML", "CSS", */"Vite", "React", "TypeScript"],
+        contents: []
+      },
+      {
+        type: "인프라",
+        tags: ["GithubPages"],
+        contents: []
       }
     ],
     etc: "",
