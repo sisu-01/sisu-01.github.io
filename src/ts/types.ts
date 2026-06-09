@@ -19,7 +19,8 @@ export type ProjectType = {
   isMain: boolean;
   techStack: StackDetail[];
   etc: string;
-  repoUrl: string;
+  repoUrl?: string;
+  serviceUrl?: string;
 }
 export const EXCEPTION_SLUGS: Record<string, string> = {
   "HTML": "html5",

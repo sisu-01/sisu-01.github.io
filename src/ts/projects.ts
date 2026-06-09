@@ -173,7 +173,8 @@ export const PROJECTS: ProjectType[] = [
       }
     ],
     etc: "생성형 Ai 덕분에 디자이너 없이 고퀄리티의 이미지 소스로 제작 할 수 있었다.\n\n사용자들은 글을 잘 읽지 않는다. 설명글보다 명확한 UX가 중요하다는 것을 느꼈다.",
-    repoUrl: "https://github.com/sisu-01/lol_nextjs"
+    repoUrl: "https://github.com/sisu-01/lol_nextjs",
+    serviceUrl: "https://www.lol-updown.com/"
   },
   {
     title: "게임 개발 협업 툴",
@@ -210,7 +211,8 @@ export const PROJECTS: ProjectType[] = [
       {type: "인프라", tags: ["Vercel"], contents: []}
     ],
     etc: "처음으로 팀 프로젝트를 해봤는데, 기획자가 고안한 기능과 레이아웃만 보고 개발하면서 보완 사항 건의하고 추가하는 이 흐름이 참 좋았다. 구상은 기획자에게 맡기고 안 하고 개발에만 집중하니까 개발 속도가 빠름을 느꼈다.",
-    repoUrl: "https://github.com/sisu-01/game-dev-coop"
+    repoUrl: "https://github.com/sisu-01/game-dev-coop",
+    serviceUrl: "https://game-dev-coop.vercel.app"
   },
   {
     title: "써브웨이 라벨 프린터",
@@ -240,7 +242,8 @@ export const PROJECTS: ProjectType[] = [
       }
     ],
     etc: "내가 주도해서 만들어서 돈 벌어서 아마 지금도 써브웨이 범계점에서 쓰이고있을텐데 기분이 째져~",
-    repoUrl: "https://github.com/sisu-01/subway-label-printer"
+    repoUrl: "https://github.com/sisu-01/subway-label-printer",
+    serviceUrl: "https://subway-label-printer.vercel.app/"
   },
   {
     title: "카연갤 북마크",
@@ -294,7 +297,8 @@ export const PROJECTS: ProjectType[] = [
       }
     ],
     etc: "처음으로 JS 라이브러리 사용해봤는데 놀라운 편의성에 감탄했다.",
-    repoUrl: "https://github.com/sisu-01/cartoon_nextjs"
+    repoUrl: "https://github.com/sisu-01/cartoon_nextjs",
+    serviceUrl: "https://cartoon-nextjs.vercel.app/"
   },
   {
     title: "SISU",
@@ -381,7 +385,6 @@ export const PROJECTS: ProjectType[] = [
       }
     ],
     etc: "GS 인증 획득 과정을 통해 피드백 및 개선을 반복하여 제품의 완성도를 높였습니다.",
-    repoUrl: ""
   },
   {
     title: "V-pad",
@@ -448,6 +451,5 @@ export const PROJECTS: ProjectType[] = [
       }
     ],
     etc: "첫 담당 프로젝트, 이론만 아는 상태로 구르면서 급성장 끼요옷",
-    repoUrl: ""
   }
 ];

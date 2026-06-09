@@ -91,19 +91,21 @@
   margin-bottom: 0;
 }
 
-/* 우측 상단 깃허브 아이콘 */
-.githubIcon {
-  color: var(--slate-400);
-  font-size: 1.5rem; /* 아이콘 크기 확보 */
-  margin-left: 1rem;
-  transition: color 0.2s ease;
-  display: inline-flex;
+.linkIcons {
+  display: flex;
+  gap: 12px; /* 아이콘 사이 간격 */
   align-items: center;
-  justify-content: center;
 }
 
-.githubIcon:hover {
-  color: var(--slate-800);
+/* 개별 아이콘 스타일 (기존 githubIcon 스타일 재활용) */
+.iconLink {
+  color: #333; /* 테마에 맞게 색상 변경 필요 */
+  font-size: 1.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.iconLink:hover {
+  color: #007bff; /* 마우스 오버 시 색상 (예: 파란색) */
 }
 
 .summary {
