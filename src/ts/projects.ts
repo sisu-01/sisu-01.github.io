@@ -69,7 +69,7 @@ export const PROJECTS: ProjectType[] = [
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "안전신문고에 블랙박스 영상 제출할 때, 영상 속 녹화 시간이 신고 시간과 다르면 신고가 접수되지 않아 제작한 프로그램",
+    summary: "안전신문고에 블랙박스 영상 제출 시, 영상 속 녹화 시간과 신고 시간이 달라 접수가 반려되어 제작한 프로그램",
     icon: ["fas", "video"],
     isMain: false,
     techStack: [
@@ -95,7 +95,7 @@ export const PROJECTS: ProjectType[] = [
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "오디오 파일명 ID 기반의 곡 정보 스크래핑, 비디오 인코딩 및 유튜브 업로드 자동화 프로그램",
+    summary: "곡 정보 스크래핑, 비디오 인코딩 및 유튜브 업로드 자동화 프로그램",
     icon: ["fas", "microphone-lines"],
     isMain: false,
     techStack: [
@@ -131,11 +131,11 @@ export const PROJECTS: ProjectType[] = [
         contents: [
           {
             features: "TypeScript 도입",
-            description: "안정성 및 개발 유지보수 편이성을 위해 TypeScript를 도입했다. 결과는 놀라웠다. 왜 이제야 도입했나 싶을 정도로 개발이 편해졌다. Typescript가 대세인 이유가 있다."
+            description: "안정성과 생산성의 향상 및 유지보수를 위해 TypeScript 첫 도입"
           },
           {
             features: "useReducer를 활용한 상태 관리",
-            description: "기존엔 useState로만 상태 관리를 했다가 useReducer의 존재를 알게되어 리팩토링을 했는데 정말 놀라웠다. 모든 상태 관리를 최상위에서 useReducer 하나로 관리하니 상태가 한눈에 들어오고, 상태 변경 로직도 한 곳에 모여있어서 유지보수가 정말 편해졌다. 상태가 복잡해질수록 useReducer의 진가가 발휘된다고 생각한다."
+            description: "useState로는 감당하기 어려운 복잡한 상태 관리를 위해 useReducer 도입하여 개발 편이성 및 유지보수성 향상"
           },
         ]
       },
@@ -145,46 +145,46 @@ export const PROJECTS: ProjectType[] = [
         contents: [
           {
             features: "Redis 도입",
-            description: "매치업 데이터는 영구 저장해야될 만큼 중요하지도 않고 빠르고 자주 불러와야 하니 메모리 기반의 Redis를 도입해서 빠르게 불러올 수 있도록 했다. 결과는 놀라웠다. 매치업 데이터 불러오는 속도가 엄청 빨라졌다. Redis는 정말 빠르다."
+            description: "중요도가 낮고, 빠른 읽기/쓰기가 필요한 데이터를 위해 Redis를 도입하여 성능 향상"
           },
           {
             features: "Python을 활용한 데이터 수집 및 처리",
-            description: "Python으로 OP.GG 크롤링 정보 가공 및 Redis에 저장하는 백엔드 구현"
+            description: "Python으로 OP.GG 정보 갱신에 맞춰 스크래핑 및 Redis에 저장하는 파이프라인 구현"
           },
           {
-            features: "Flask 프레임워크를 활용한 API 개발",
+            features: "Flask API 개발",
             description: "Flask를 활용하여 프론트엔드에서 요청하는 매치업 데이터에 대한 API를 개발하여, 프론트엔드와 백엔드 간의 원활한 데이터 통신을 구현했습니다."
           }
         ]
       },
       {
         type: "인프라",
-        tags: ["Linux", "Docker"],
+        tags: ["Linux", "Docker", "CloudFlare"],
         contents: [
           {
-            features: "무료 SSL 인증서 자동 인증",
-            description: "지금까지는 기관에서 SSL 인증서를 구입해서 사용했음. 하지만 이걸 알고 Let's Encrypt를 활용하여 무료 SSL 인증서를 자동으로 발급하고 갱신할 수 있도록 구현했습니다. 이 과정에서 CloudFlare DNS API를 활용"
+            features: "Let's Encrypt SSL 자동 인증",
+            description: "dns-01 인증 방식을 사용하기 위해 CloudFlare DNS API를 활용하여 자동 인증 구현"
           },
           {
             features: "Google Adsense 승인",
-            description: "Google Adsense 승인을 위해 웹사이트의 보안 및 콘텐츠 품질을 개선하여 광고 수익화를 가능하게 했습니다."
+            description: "승인을 위해 웹사이트의 보안 및 콘텐츠 품질을 개선하여 수익 창출 기반 마련"
           }
         ]
       }
     ],
-    etc: "생성형 Ai 덕분에 디자이너 없이 고퀄리티의 이미지 소스로 제작 할 수 있었다.\n\n사용자들은 글을 잘 읽지 않는다. 설명글보다 명확한 UX가 중요하다는 것을 느꼈다.",
+    etc: "스크래핑과 API 서버를 하나의 App에서 관리하기 위해 Flask를 도입했지만,\n~~한 이유로 불가능하다는 것을 알게됐다.\n\n생성형 Ai 덕분에 디자이너 없이 고퀄리티의 이미지 소스로 제작 할 수 있었다.\n\n사용자들은 글을 잘 읽지 않는다. 설명글보다 명확한 UX가 중요하다는 것을 느꼈다.",
     repoUrl: "https://github.com/sisu-01/lol_nextjs",
     serviceUrl: "https://www.lol-updown.com/"
   },
   {
-    title: "게임 개발 협업 툴",
+    title: "Game Dev Coop",
     subtitle: "게임 개발 협업 웹서비스",
     images: [
       "/test/1.png",
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "Jira의 불필요한 기능은 덜어내고 게임 개발에 특화된 기능들을 추가하여, 게임 개발자들이 협업에만 집중할 수 있도록 도와주는 웹서비스",
     icon: ["fas", "calendar-days"],
     isMain: true,
     techStack: [
@@ -193,8 +193,8 @@ export const PROJECTS: ProjectType[] = [
         tags: [/*"HTML", "CSS", */"JavaScript", "Next.js"],
         contents: [
           {
-            features: "Drag & Drop을 활용한 직관적인 UI 구현",
-            description: "dnd-kit 라이브러리를 활용하여 대시보드 및 칸반보드를 구현."
+            features: "Drag & Drop UI 구현",
+            description: "dnd-kit 라이브러리를 활용하여 대시보드 및 칸반보드를 구현"
           }
         ]
       },
@@ -204,25 +204,28 @@ export const PROJECTS: ProjectType[] = [
         contents: [
           {
             features: "구글 로그인 연동",
-            description: "OAuth 2.0을 활용하여 구글 로그인 기능을 구현하여 사용자가 별도의 회원가입 없이도 서비스를 이용할 수 있도록 했습니다."
+            description: "OAuth 2.0을 활용하여 구글 계정으로 로그인 기능 구현"
           }
         ]
       },
       {type: "인프라", tags: ["Vercel"], contents: []}
     ],
-    etc: "처음으로 팀 프로젝트를 해봤는데, 기획자가 고안한 기능과 레이아웃만 보고 개발하면서 보완 사항 건의하고 추가하는 이 흐름이 참 좋았다. 구상은 기획자에게 맡기고 안 하고 개발에만 집중하니까 개발 속도가 빠름을 느꼈다.",
+    etc:
+    "첫 팀 프로젝트를 통해 기획자와 디자이너와의 협업을 경험했다.\n"+
+    "기획자가 제시한 설계안과 디자이너의 시안을 참고하여 개발에만 집중할 수 있었고, 개발 과정에서 느낀 개선 사항을 기획자에게 피드백했다.\n"+
+    "협업을 통해 분담의 효율성과 소통의 중요성을 느꼈다.",
     repoUrl: "https://github.com/sisu-01/game-dev-coop",
     serviceUrl: "https://game-dev-coop.vercel.app"
   },
   {
     title: "써브웨이 라벨 프린터",
-    subtitle: "써브웨이 재고 관리 도움",
+    subtitle: "재고 관리용 라벨 출력 웹 애플리케이션",
     images: [
       "/test/1.png",
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "써브웨이에서 기존에 사용하던 비효율적인 라벨 프린팅 방식을 원클릭 버튼 형태로 개선한 웹 애플리케이션",
     icon: ["fas", "print"],
     isMain: true,
     techStack: [
@@ -231,17 +234,20 @@ export const PROJECTS: ProjectType[] = [
         tags: [/*"HTML", "CSS", */"JavaScript", "React"],
         contents: [
           {
-            features: "재고 관리용 라벨 프린터 웹 애플리케이션 개발",
-            description: "매장에서 기존에 사용하던 라벨 프린팅 시스템은 일일히 정보 기입, but 내가 개발한 것은 정보가 자동으로 기입, print() 활용하여 버튼 클릭 몇 번 만으로 라벨이 프린팅 됨"
+            features: "단일 HTML 구조",
+            description: "비개발자의 유지보수 편의를 위해 CDN 기반 단일 HTML로 React 앱 구현"
           },
           {
-            features: "손 쉬운 유지보수를 위한 싱글 html 파일로 제작",
-            description: "내가 알바 그만두면 그거 누가 관리할건데.. 그래서 싱글 html 파일에 React는 CDN으로 불러와서 유지보수 방법 적어놨음"
+            features: "비전공자를 위한 구조 설계",
+            description: "편리한 메뉴 수정을 위해 메뉴 데이터를 독립적인 외부 .js 파일로 분리"
           }
         ]
       }
     ],
-    etc: "내가 주도해서 만들어서 돈 벌어서 아마 지금도 써브웨이 범계점에서 쓰이고있을텐데 기분이 째져~",
+    etc:
+    "회사 업무 외에, 개인적으로 기획·개발하여 실제 현장에 도입되고 돈을 번 프로젝트다.\n"+
+    "현재까지도 써브웨이에서 내가 만든 애플레케이션이 사용되고 있을 것이다.\n\n"+
+    "기술적으로 어렵지 않고 작은 프로젝트였지만, 위와 같은 이유로 메인 프로젝트로 분류해놨다.",
     repoUrl: "https://github.com/sisu-01/subway-label-printer",
     serviceUrl: "https://subway-label-printer.vercel.app/"
   },
