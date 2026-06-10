@@ -38,6 +38,7 @@ function App() {
           - 도전! 롤든벨 flask, scapping 같이 안 되는 이유 확인<br/>
           - 쪼개져있는 리포지토리들 합칠 수 있나 확인<br/>
           - 프로젝트 이미지 레이아웃 디자인<br/> 
+          - 다크모드<br/>
         </div>
         <Profile />
         <TagChart />
