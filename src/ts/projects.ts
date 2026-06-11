@@ -160,7 +160,7 @@ export const PROJECTS: ProjectType[] = [
       },
       {
         type: "인프라",
-        tags: ["Linux", "Docker", "CloudFlare"],
+        tags: ["Linux", "Docker", "CloudFlare", "Let's Encrypt"],
         contents: [
           {
             features: "Let's Encrypt SSL 자동 인증",
@@ -173,7 +173,10 @@ export const PROJECTS: ProjectType[] = [
         ]
       }
     ],
-    etc: "스크래핑과 API 서버를 하나의 App에서 관리하기 위해 Flask를 도입했지만,\n~~한 이유로 불가능하다는 것을 알게됐다.\n\n생성형 Ai 덕분에 디자이너 없이 고퀄리티의 이미지 소스로 제작 할 수 있었다.\n\n사용자들은 글을 잘 읽지 않는다. 설명글보다 명확한 UX가 중요하다는 것을 느꼈다.",
+    etc:
+    "스크래핑과 API 서버를 하나의 App에서 관리하기 위해 Flask를 도입했지만,\n~~한 이유로 불가능하다는 것을 알게됐다.\n\n"+
+    "상업용 웹이 아니면 80번 포트가 막혀있어 http-01 방식의 let's encrypt를 사용할 수 없다.\n\n"+
+    "사용자들은 글을 잘 읽지 않는다. 설명글보다 명확한 UX가 중요하다는 것을 느꼈다.",
     repoUrl: "https://github.com/sisu-01/lol_nextjs",
     serviceUrl: "https://www.lol-updown.com/"
   },
@@ -362,7 +365,7 @@ export const PROJECTS: ProjectType[] = [
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "기업들의 직원 PC의 윈도우 업데이트를 자동으로 관리하고 업데이트 실패 시 원격으로 문제를 해결할 수 있도록 도와주는 솔루션",
     icon: ["fab", "windows"],
     isMain: true,
     techStack: [
@@ -407,25 +410,25 @@ export const PROJECTS: ProjectType[] = [
       "/test/2.gif",
       "/test/3.png",
     ],
-    summary: "요약입니두~",
+    summary: "키보드 해킹(키로거)을 방지하기 위해 마우스 입력 기반의 가상 키패드를 제공하고, 클라이언트-서버 간 구간 암호화를 통해 입력 데이터를 안전하게 보호하는 보안 솔루션",
     icon: ["fas", "keyboard"],
     isMain: true,
     techStack: [
       {
         type: "프론트엔드",
-        tags: [/*"HTML", "CSS", */"JavaScript"],
+        tags: [/*"HTML", "CSS", */"JavaScript", "jQuery"],
         contents: [
           {
-            features: "가상 키패드 구현",
-            description: "키보드 입력이 필요한 상황에서 마우스로 클릭하여 입력하는 가상 키패드를 구현했습니다. 이를 통해 키로거로부터 사용자의 입력을 보호할 수 있습니다."
+            features: "가상 키패드 UI 및 로직 구현",
+            description: "마우스로 클릭하여 입력하는 가상 키패드를 구현"
           },
-          {
-            features: "반응형 디자인 적용",
-            description: "다양한 화면 크기에서 원활하게 작동하도록 반응형 디자인을 적용하여, 데스크톱과 모바일 환경 모두에서 최적의 사용자 경험을 제공합니다."
-          },
+          // {
+          //   features: "반응형 레이아웃 적용",
+          //   description: "다양한 크기의 모바일 화면에서도 동작하는 반응형 디자인을 적용"
+          // },
           {
             features: "입력 데이터 암호화",
-            description: "아스키값을 뒤섞어 메모리단에서 비밀번호가 노출되는 것을 방지합니다."
+            description: "아스키값을 뒤섞어 메모리단에서 비밀번호가 노출되는 것을 방지"
           }
         ]
       },
@@ -434,17 +437,17 @@ export const PROJECTS: ProjectType[] = [
         tags: ["Node.js", "Express"],
         contents: [
           {
-            features: "Crypto-JS 라이브러리를 활용한 암호화",
-            description: "AES 대칭키 암호화 알고리즘을 사용하여 비밀번호를 암호화합니다."
+            features: "AES 대칭키 암호화 적용",
+            description: "CryptoJS 라이브러리를 활용하여 AES 대칭키 암호화 적용"
           },
           {
-            features: "ajax 통신으로 비동기 데이터 처리",
-            description: "클라이언트가 서버로부터 암호화된 global key를 받아서 비밀번호를 암호화한 뒤, 암호화된 비밀번호를 서버로 전송하여 네트워크 상에서의 보안을 강화합니다."
+            features: "암·복호화 api 구현",
+            description: "클라이언트용 암호화, 서버용 복호화 API 구현"
           },
-          {
-            features: "server to server",
-            description: "서버가 받은 암호화된 비밀번호를 복호화 서버와 통신하여 복호화된 비밀번호를 받아 무결성 검사를 진행합니다."
-          }
+          // {
+          //   features: "server to server",
+          //   description: "복호화 서버와 통신하여 비밀번호를 복호화 한 후 로그인 인증"
+          // }
         ]
       },
       {
@@ -453,11 +456,11 @@ export const PROJECTS: ProjectType[] = [
         contents: [
           {
             features: "다양한 서비스 환경 경험",
-            description: "고객사들마다 다른 다양한 운영 환경에서의 경험을 통해 네트워크 및 서버를 이해하고 문제 해결 능력을 키웠습니다."
+            description: "고객사들의 다양한 운영 환경을 접하며 네트워크 및 서버를 이해"
           },
           {
             features: "Reverse Proxy 설정",
-            description: "리버스 프록시를 통해 클라이언트의 요청을 서버로 전달하고 응답을 클라이언트에게 반환하는 구조를 구현했습니다."
+            description: "리버스 프록시를 통해 보안 강화 및 트래픽 관리 구현"
           }
         ]
       }
