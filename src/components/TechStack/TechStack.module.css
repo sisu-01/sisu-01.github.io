@@ -17,13 +17,12 @@
 .category {
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--slate-600);
+  color: var(--text-secondary);
 }
 
-/* 충돌 방지를 위해 기존의 transition 및 active, inactive 클래스 제거 */
 .stackSection {
   margin-bottom: 1.5rem;
-  will-change: transform, opacity; /* 브라우저 최적화 힌트 제공 */
+  will-change: transform, opacity;
 }
 
 .contentList {

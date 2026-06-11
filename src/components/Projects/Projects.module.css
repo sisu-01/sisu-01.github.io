@@ -1,10 +1,6 @@
 /* Projects.module.css */
+.container { width: 100%; }
 
-.container {
-  width: 100%;
-}
-
-/* 메인 프로젝트 그리드 (2열) */
 .mainGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -13,12 +9,9 @@
 }
 
 @media (min-width: 768px) {
-  .mainGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .mainGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-/* 사이드 프로젝트 그리드 (3열) */
 .sideGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -26,31 +19,26 @@
 }
 
 @media (min-width: 768px) {
-  .sideGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  .sideGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .card {
-  background-color: white;
+  background-color: var(--bg-card);
   border-radius: 0.75rem;
-  border: 1px solid var(--slate-200);
+  border: 1px solid var(--border-light);
   padding: 1.5rem;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 var(--shadow-color);
   transition: all 0.2s ease;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 .card:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px var(--shadow-hover);
   transform: translateY(-2px);
 }
 
-/* 아이콘 위치의 핵심: Header */
 .cardHeader {
   display: flex;
-  justify-content: space-between; /* 양 끝 정렬 */
+  justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1rem;
   width: 100%;
@@ -58,8 +46,7 @@
 
 .titleWrapper {
   display: flex;
-  /* align-items: center; */
-  gap: 1rem; /* 이미지와 제목 사이 간격 */
+  gap: 1rem;
 }
 
 .titleImg {
@@ -68,23 +55,21 @@
   justify-content: center;
   width: 3.5rem;
   height: 3.5rem;
-  border: 2px solid var(--blue-600);
+  border: 2px solid var(--accent-blue);
   border-radius: 0.75rem;
 }
 
-.titleArea {
-  flex: 1; /* 제목이 가변적으로 공간 차지 */
-}
+.titleArea { flex: 1; }
 
 .titleArea h4 {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
-  color: var(--slate-800);
+  color: var(--text-strong);
 }
 
 .subtitle {
-  color: var(--blue-600);
+  color: var(--accent-blue);
   font-size: 0.875rem;
   font-weight: 600;
   margin-top: 0.25rem;
@@ -93,59 +78,46 @@
 
 .linkIcons {
   display: flex;
-  gap: 12px; /* 아이콘 사이 간격 */
+  gap: 12px;
   align-items: center;
 }
 
-/* 개별 아이콘 스타일 (기존 githubIcon 스타일 재활용) */
 .iconLink {
-  color: #333; /* 테마에 맞게 색상 변경 필요 */
+  color: var(--text-primary);
   font-size: 1.5rem;
   transition: color 0.2s ease-in-out;
 }
 
 .iconLink:hover {
-  color: #007bff; /* 마우스 오버 시 색상 (예: 파란색) */
+  color: var(--accent-blue);
 }
 
 .summary {
   font-size: 0.95rem;
-  color: var(--slate-600);
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.8;
 }
 
-.content {
-  margin-top: auto; /* 하단 내용 아래로 밀착 */
-}
+.content { margin-top: auto; }
 
 .divider {
   height: 1px;
-  background-color: var(--slate-100);
+  background-color: var(--border-light);
   margin: 1.25rem 0;
 }
-
 
 .etc {
   margin-top: 1.25rem;
   padding: 0.75rem 1rem;
-  
-  /* 부드러운 배경색과 테두리로 강조 구역 설정 */
-  background-color: var(--slate-50, #f8fafc); 
-  border-left: 3px solid var(--slate-300, #cbd5e1);
+  background-color: var(--bg-sub); 
+  border-left: 3px solid var(--border-medium);
   border-radius: 0 6px 6px 0;
-  
-  /* 텍스트 스타일 */
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--slate-600, #475569);
-  
-  /* 텍스트가 여러 줄이 되어도 자연스럽게 처리 */
+  color: var(--text-secondary);
   word-break: keep-all; 
-  white-space: pre-wrap; /* 줄바꿈(\n)이나 띄어쓰기 유지 */
+  white-space: pre-wrap;
 }
 
-/* 데이터가 없는 경우를 대비한 최적화 (선택사항) */
-.etc:empty {
-  display: none;
-}
+.etc:empty { display: none; }
