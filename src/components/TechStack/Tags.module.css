@@ -8,16 +8,15 @@
   align-items: center;
   gap: 0.25rem;
   padding: 0.25rem 0.5rem;
-  background-color: #f1f5f9;
-  color: #475569;
+  background-color: var(--bg-sub);
+  color: var(--text-secondary);
   border-radius: 0.25rem;
   font-size: 0.75rem;
   font-weight: 600;
   transition: all 0.2s;
 }
 
-/* 카테고리 선택 시 하이라이트 효과 */
 .active .tag {
-  background-color: var(--slate-800);
-  color: white;
+  background-color: var(--text-primary);
+  color: var(--bg-main);
 }

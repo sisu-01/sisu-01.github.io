@@ -10,11 +10,16 @@
 .accordionHeader h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--slate-700);
+  color: var(--text-primary);
   margin: 0;
 }
 
-.arrow { font-size: 0.6rem; transition: transform 0.3s; color: var(--slate-400); }
+.arrow { 
+  font-size: 0.6rem; 
+  transition: transform 0.3s; 
+  color: var(--text-muted); 
+}
+
 .arrowOpen { transform: rotate(180deg); }
 
 .accordionContent {
@@ -28,7 +33,7 @@
 .accordionContent h6 {
   font-size: 0.9rem;
   font-weight: 400;
-  color: var(--slate-500);
+  color: var(--text-secondary);
   line-height: 1.4;
   margin: 0;
 }

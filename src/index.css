@@ -1,16 +1,62 @@
-/* index.css */
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
 
 :root {
+  /* 포트폴리오 포인트 컬러 (유지) */
   --color-프론트엔드: #2563eb;
   --color-백엔드: #abacac;
   --color-인프라: #f59e0b;
-  --slate-50: #f8fafc;
-  --slate-200: #e2e8f0;
-  --slate-400: #94a3b8;
-  --slate-600: #475569;
-  --slate-800: #1e293b;
-  --blue-600: #2563eb;
+
+  /* 테마 공통 액센트/그라데이션 */
+  --brand-gradient-start: #2563eb;
+  --brand-gradient-end: #4f46e5;
+  --accent-blue: #2563eb;
+  --accent-blue-hover: #1d4ed8;
+
+  /* 💡 라이트모드 배경 */
+  --bg-main: #f8fafc; /* slate-50 */
+  --bg-card: #ffffff;
+  --bg-sub: #f1f5f9; /* slate-100 */
+  --bg-header: rgba(255, 255, 255, 0.8);
+  --bg-footer: #0f172a;
+
+  /* 💡 라이트모드 텍스트 */
+  --text-strong: #0f172a; /* slate-900 */
+  --text-primary: #1e293b; /* slate-800 */
+  --text-secondary: #475569; /* slate-600 */
+  --text-muted: #64748b; /* slate-500 */
+
+  /* 💡 라이트모드 보더 및 그림자 */
+  --border-light: #e2e8f0; /* slate-200 */
+  --border-medium: #cbd5e1; /* slate-300 */
+  --border-heavy: #94a3b8; /* slate-400 */
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --shadow-hover: rgba(0, 0, 0, 0.1);
+}
+
+/* 🌙 다크모드 변수 스위칭 */
+[data-theme='dark'] {
+  --brand-gradient-start: #60a5fa;
+  --brand-gradient-end: #818cf8;
+  --accent-blue: #3b82f6;
+  --accent-blue-hover: #60a5fa;
+
+  --bg-main: #0f172a; /* slate-900 */
+  --bg-card: #1e293b; /* slate-800 */
+  --bg-sub: #334155; /* slate-700 */
+  --bg-header: rgba(15, 23, 42, 0.8);
+  --bg-footer: #020617; /* slate-950 */
+
+  --text-strong: #f8fafc; /* slate-50 */
+  --text-primary: #e2e8f0; /* slate-200 */
+  --text-secondary: #94a3b8; /* slate-400 */
+  --text-muted: #64748b; /* slate-500 */
+
+  --border-light: #334155; /* slate-700 */
+  --border-medium: #475569; /* slate-600 */
+  --border-heavy: #64748b; /* slate-500 */
+  
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-hover: rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -20,9 +66,11 @@ html {
 body {
   margin: 0;
   font-family: 'Pretendard', sans-serif;
-  background-color: var(--slate-50);
-  color: var(--slate-800);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
+  /* 테마 전환 시 부드러운 트랜지션 효과 적용 */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ul {

@@ -1,13 +1,12 @@
 /* Carousel.module.css */
-
 .carouselContainer {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10; /* 카드 내부에서 가장 안정적인 가로세로 비율 */
-  background-color: var(--slate-100, #f1f5f9);
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-sub);
   border-radius: 0.5rem;
   overflow: hidden;
-  margin-bottom: 1.25rem; /* summary 내부 마진 조정을 고려한 간격 */
+  margin-bottom: 1.25rem;
 }
 
 .imageWrapper {
@@ -18,16 +17,15 @@
 .image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 영역을 가득 채우되 비율 유지 (필요 시 contain으로 변경 가능) */
+  object-fit: cover;
   display: block;
 }
 
-/* 네비게이션 버튼 공통 */
 .navButton {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--bg-header);
   border: none;
   border-radius: 50%;
   width: 2rem;
@@ -36,31 +34,24 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--slate-700, #334155);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+  box-shadow: 0 2px 4px var(--shadow-color);
   transition: all 0.2s ease;
-  opacity: 0; /* 평소에는 숨김 */
+  opacity: 0;
 }
 
-/* 캐러셀 영역에 호버 시 버튼 노출 */
 .carouselContainer:hover .navButton {
   opacity: 1;
 }
 
 .navButton:hover {
-  background-color: white;
-  color: var(--blue-600, #2563eb);
+  background-color: var(--bg-card);
+  color: var(--accent-blue);
 }
 
-.prev {
-  left: 0.5rem;
-}
+.prev { left: 0.5rem; }
+.next { right: 0.5rem; }
 
-.next {
-  right: 0.5rem;
-}
-
-/* 하단 인디케이터 컨테이너 */
 .dotsContainer {
   position: absolute;
   bottom: 0.75rem;
@@ -68,17 +59,17 @@
   transform: translateX(-50%);
   display: flex;
   gap: 0.4rem;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 0.35rem 0.6rem;
   border-radius: 1rem;
-  backdrop-filter: blur(4px); /* 트렌디한 블러 효과 */
+  backdrop-filter: blur(4px);
 }
 
 .dot {
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: all 0.2s ease;
 }

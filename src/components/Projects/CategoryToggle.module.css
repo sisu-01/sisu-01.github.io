@@ -16,7 +16,7 @@
 .label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--slate-600);
+  color: var(--text-secondary);
   margin-right: 0.5rem;
 }
 
@@ -32,34 +32,32 @@
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  border-radius: 9999px; /* Pill style */
-  border: 1px solid var(--slate-200);
-  background-color: white;
-  color: var(--slate-600);
+  border-radius: 9999px;
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
 }
 
 .toggleBtn:hover {
-  border-color: var(--slate-400);
-  background-color: var(--slate-50);
+  border-color: var(--border-heavy);
+  background-color: var(--bg-sub);
 }
 
-/* 활성화 상태 (Active) */
 .active {
-  background-color: var(--slate-800);
-  border-color: var(--slate-800);
-  color: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-main);
+  box-shadow: 0 4px 6px -1px var(--shadow-color);
 }
 
 .active:hover {
-  background-color: #0f172a; /* 더 짙은 슬레이트 */
-  border-color: #0f172a;
+  background-color: var(--text-strong);
+  border-color: var(--text-strong);
 }
 
-/* FontAwesome 아이콘 간격용 (선택사항) */
 :global(.ml-1) {
   margin-left: 0.35rem;
 }

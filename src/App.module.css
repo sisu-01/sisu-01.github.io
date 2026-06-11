@@ -3,13 +3,14 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--bg-header);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--slate-200);
+  border-bottom: 1px solid var(--border-light);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .headerInner {
-  max-width: 1152px; /* 6xl */
+  max-width: 1152px;
   margin: 0 auto;
   padding: 0 1.5rem;
   height: 4rem;
@@ -21,7 +22,7 @@
 .logo {
   font-size: 1.25rem;
   font-weight: 700;
-  background: linear-gradient(to right, var(--blue-600), #4f46e5);
+  background: linear-gradient(to right, var(--brand-gradient-start), var(--brand-gradient-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -30,12 +31,12 @@
   margin-left: 1.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--slate-600);
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.nav a:hover { color: var(--blue-600); }
+.nav a:hover { color: var(--accent-blue); }
 
 .main {
   max-width: 1152px;
@@ -55,14 +56,16 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-right: 1rem;
+  color: var(--text-strong);
 }
 
-.line { flex: 1; height: 1px; background-color: var(--slate-200); }
+.line { flex: 1; height: 1px; background-color: var(--border-light); }
 
 .footer {
-  background-color: #0f172a;
-  color: var(--slate-400);
+  background-color: var(--bg-footer);
+  color: var(--text-muted);
   padding: 3rem 0;
   text-align: center;
   font-size: 0.875rem;
+  transition: background-color 0.3s ease;
 }
