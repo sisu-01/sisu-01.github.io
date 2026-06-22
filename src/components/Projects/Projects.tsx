@@ -21,58 +21,67 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
   return (
     <div className={isMain ? styles.mainGrid : styles.sideGrid}>
       {projects.map((project) => (
-        <div key={project.title} className={styles.card}>
-          {/* 헤더 영역: 제목과 링크 아이콘들이 양 옆으로 배치됨 */}
-          <div className={styles.cardHeader}>
-            <div className={styles.titleWrapper}>
-              <div className={styles.titleImg}>
-                <FontAwesomeIcon icon={project.icon} size="2x" />
+        <div key={project.title} className={styles.cardWrapper}>
+          {isMain && (
+            <div className={styles.outImages}>
+              <Carousel images={project.images} />
+            </div>
+          )}
+          <div className={styles.card}>
+            {/* 헤더 영역: 제목과 링크 아이콘들이 양 옆으로 배치됨 */}
+            <div className={styles.cardHeader}>
+              <div className={styles.titleWrapper}>
+                <div className={styles.titleImg}>
+                  <FontAwesomeIcon icon={project.icon} size="2x" />
+                </div>
+                <div className={styles.titleArea}>
+                  <h4>{project.title}</h4>
+                  <p className={styles.subtitle}>{project.subtitle}</p>
+                </div>
               </div>
-              <div className={styles.titleArea}>
-                <h4>{project.title}</h4>
-                <p className={styles.subtitle}>{project.subtitle}</p>
+              
+              {/* 우측 상단 링크 아이콘 영역 (서비스 URL 및 깃허브) */}
+              <div className={styles.linkIcons}>
+                {project.serviceUrl && (
+                  <a 
+                    href={project.serviceUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.iconLink}
+                    title="서비스 바로가기"
+                  >
+                    <i className="fas fa-external-link-alt"></i>
+                  </a>
+                )}
+                {project.repoUrl && (
+                  <a 
+                    href={project.repoUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.iconLink}
+                    title="GitHub 저장소"
+                  >
+                    <i className="fab fa-github"></i>
+                  </a>
+                )}
               </div>
             </div>
             
-            {/* 우측 상단 링크 아이콘 영역 (서비스 URL 및 깃허브) */}
-            <div className={styles.linkIcons}>
-              {project.serviceUrl && (
-                <a 
-                  href={project.serviceUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={styles.iconLink}
-                  title="서비스 바로가기"
-                >
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-              )}
-              {project.repoUrl && (
-                <a 
-                  href={project.repoUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={styles.iconLink}
-                  title="GitHub 저장소"
-                >
-                  <i className="fab fa-github"></i>
-                </a>
-              )}
+            <div className={isMain ? styles.mainImages : styles.sideImages}>
+              <Carousel images={project.images} />
             </div>
+            <div className={styles.summary}>{project.summary}</div>
+            
+            {project.techStack.length > 0 && (
+              <div className={styles.content}>
+                <Tags techStack={project.techStack} getCategories={getCategories} />
+                <div className={styles.divider}></div>
+                <TechStack techStack={project.techStack} getCategories={getCategories} />
+              </div>
+            )}
+            
+            <div className={styles.etc}>{project.etc}</div>
           </div>
-          
-          <Carousel images={project.images} />
-          <div className={styles.summary}>{project.summary}</div>
-          
-          {project.techStack.length > 0 && (
-            <div className={styles.content}>
-              <Tags techStack={project.techStack} getCategories={getCategories} />
-              <div className={styles.divider}></div>
-              <TechStack techStack={project.techStack} getCategories={getCategories} />
-            </div>
-          )}
-          
-          <div className={styles.etc}>{project.etc}</div>
         </div>
       ))}
     </div>

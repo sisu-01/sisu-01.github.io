@@ -7,19 +7,34 @@
   gap: 2rem;
   margin-bottom: 3rem;
 }
-
-@media (min-width: 768px) {
-  .mainGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
 .sideGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
-
+.cardWrapper {
+  display: grid;
+  gap: 2rem; 
+}
+.outImages {
+  display: none;
+}
 @media (min-width: 768px) {
-  .sideGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mainGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .sideGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .mainGrid .cardWrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mainImages {
+    display: none;
+  }
+  .outImages {
+    display: block;
+  }
 }
 
 .card {
