@@ -30,10 +30,13 @@ export const PROJECTS: ProjectType[] = [
         ]
       }
     ],
-    etc: "Ai의 힘을 극한으로 발휘한 프로젝트였다.\n" + 
-        "하지만 Ai는 결국 도구일 뿐, 개발의 방향성과 아이디어같은 설계 능력은 개발자의 몫임을 느꼈다.\n\n" +
-        "Ai가 해준 것들\n" + 
-        "1. PUBG 인게임 박격포 탄속 역산하기\n2. 수평 거리와 고도차를 고려한 탄도학 공식 만들기\n3. OpenCV 기능 도움",
+    etc: "Ai를 유용하게 사용했던 프로젝트이다.\n" + 
+        "하지만 Ai는 결국 도구일 뿐, 개발의 방향성과 아이디어 구상 같은 설계 능력은 개발자의 몫임을 느꼈다.\n\n" +
+        "Ai를 활용하여 개발한 주요 기능 목록\n" + 
+        "1. PUBG 인게임 박격포 탄속 역산하기\n"+
+        "2. 수평 거리와 고도차를 고려한 탄도학 공식 만들기\n"+
+        "3. 바이너리 데이터 이미지 변환 및 병합 자동화\n"+
+        "4. OpenCV 기능 도움",
     repoUrl: "https://github.com/sisu-01/pubg-mortar-calc"
   },
   {
@@ -85,7 +88,7 @@ export const PROJECTS: ProjectType[] = [
       //   ]
       // }
     ],
-    etc: "100% Ai 제작",
+    etc: "바이브 코딩",
     repoUrl: "https://github.com/sisu-01/FineVu_TimeEditor"
   },
   {
@@ -111,7 +114,7 @@ export const PROJECTS: ProjectType[] = [
       //   ]
       // }
     ],
-    etc: "100% Ai 제작",
+    etc: "바이브 코딩",
     repoUrl: "https://github.com/sisu-01/TJ_Youtube_uploader"
   },
   {
