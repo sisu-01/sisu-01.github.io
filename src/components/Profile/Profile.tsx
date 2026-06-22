@@ -10,9 +10,7 @@ const Profile = () => {
             안녕하세요, <br className={styles.mobileBr} />개발자입니다.
           </h2>
           <p className={styles.description}>
-            자기소개자기소개자기소개자기소개자기소개자기소개자기소개
-            <br />
-            자기소개자기소개자기소개자기소개자기소개자기소개자기소개
+            자기소개자기소개자기소
           </p>
         </div>
         
