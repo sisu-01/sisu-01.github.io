@@ -56,6 +56,8 @@ function App() {
           - 도전! 롤든벨 flask, scapping 같이 안 되는 이유 확인<br/>
           - 쪼개져있는 프론트-백앤드 리포지토리 하나로 합치고 Readme.md 작성<br/>
           - 프로젝트 이미지 촬영<br/>
+          - 자기소개<br/>
+          - 증사 새로 찍기?<br/>
         </div>
         <Profile />
         <TagChart />

@@ -6,15 +6,26 @@ export const PROJECTS: ProjectType[] = [
     title: "PUBG 박격포 계산기",
     subtitle: "박격포 사격제원 산출 자동화 프로그램",
     images: [
-      "/test/4.png",
-      "/test/1.png",
-      "/test/2.gif",
-      "/test/3.png",
+      "/pubg_mortar/썸네일",
+      "/pubg_mortar/cmd 실행화면",
+      "/pubg_mortar/디버깅 이미지",
+      "/pubg_mortar/canvas",
+      "/pubg_mortar/살인 gif?",
     ],
     summary: "인게임 지도 이미지 분석과 지형 데이터를 활용해 객체 간 수평 거리 및 고도차를 분석하고, 정밀 타격에 필요한 박격포 사격 제원을 자동으로 산출하는 프로그램",
     icon: ["fas", "bomb"],
     isMain: true,
     techStack: [
+      {
+        type: "프론트엔드",
+        tags: [],
+        contents: [
+          {
+            features: "TTS 활용 사격 제원 음성 알림",
+            description: "안티치트 충돌 방지를 위해 음성을 통하여 플레이어에게 정보 제공"
+          }
+        ]
+      },
       {
         type: "백엔드",
         tags: ["Python", "OpenCV", "UnrealEngine"],
@@ -24,19 +35,24 @@ export const PROJECTS: ProjectType[] = [
             description: "PUBG 맵 지형 데이터(heightmap)을 얻기 위해 언리얼 엔진 패키지의 메타데이터를 분석하여 파일을 추출"
           },
           {
+            features: "분할된 이미지들 자동 병합",
+            description: "조각나있는 16비트 지형 데이터를 자동으로 순서에 맞게 병합하여 개발 시간 단축"
+          },
+          {
             features: "OpenCV 활용 객체 탐지",
             description: "플레이어의 색상 기반 이진화 마스킹 후 탬플릿 이미지 매치, 이미지 비율 검증을 통해 객체 탐지"
           },
         ]
       }
     ],
-    etc: "Ai를 유용하게 사용했던 프로젝트이다.\n" + 
+    etc: "85% 정도 바이브 코딩으로 진행한 프로젝트이다.\n" + 
         "하지만 Ai는 결국 도구일 뿐, 개발의 방향성과 아이디어 구상 같은 설계 능력은 개발자의 몫임을 느꼈다.\n\n" +
         "Ai를 활용하여 개발한 주요 기능 목록\n" + 
         "1. PUBG 인게임 박격포 탄속 역산하기\n"+
         "2. 수평 거리와 고도차를 고려한 탄도학 공식 만들기\n"+
         "3. 바이너리 데이터 이미지 변환 및 병합 자동화\n"+
-        "4. OpenCV 기능 도움",
+        "4. OpenCV 기능 도움\n"+
+        "5. 지형 데이터 시각화를 위한 three.js 구현",
     repoUrl: "https://github.com/sisu-01/pubg-mortar-calc"
   },
   {
