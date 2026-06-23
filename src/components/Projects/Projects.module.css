@@ -33,7 +33,10 @@
     display: none;
   }
   .outImages {
-    display: block;
+    position: sticky;
+    top: 14rem;
+    display: flex;
+    aspect-ratio: 16 / 10;
   }
 }
 
@@ -110,6 +113,7 @@
 .summary {
   font-size: 0.95rem;
   color: var(--text-secondary);
+  margin-top: 1.25rem;
   margin-bottom: 1.5rem;
   line-height: 1.8;
 }
