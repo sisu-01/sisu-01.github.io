@@ -6,11 +6,12 @@ export const PROJECTS: ProjectType[] = [
     title: "PUBG 박격포 계산기",
     subtitle: "박격포 사격제원 산출 자동화 프로그램",
     images: [
-      "/pubg_mortar/썸네일",
-      "/pubg_mortar/cmd 실행화면",
-      "/pubg_mortar/디버깅 이미지",
-      "/pubg_mortar/canvas",
-      "/pubg_mortar/살인 gif?",
+      "/projects/pubg_mortar/thumbnail.png",
+      "/projects/pubg_mortar/explain.png",
+      "/projects/pubg_mortar/heightmap.png",
+      "/projects/pubg_mortar/threejs.png",
+      "/projects/pubg_mortar/final.png",
+      // 죽이는 움짤?
     ],
     summary: "인게임 지도 이미지 분석과 지형 데이터를 활용해 객체 간 수평 거리 및 고도차를 분석하고, 정밀 타격에 필요한 박격포 사격 제원을 자동으로 산출하는 프로그램",
     icon: ["fas", "bomb"],
