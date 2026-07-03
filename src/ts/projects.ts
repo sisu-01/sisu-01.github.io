@@ -6,11 +6,11 @@ export const PROJECTS: ProjectType[] = [
     title: "PUBG 박격포 계산기",
     subtitle: "박격포 사격제원 산출 자동화 프로그램",
     images: [
-      "/projects/pubg_mortar/thumbnail.png",
-      "/projects/pubg_mortar/explain.png",
-      "/projects/pubg_mortar/heightmap.png",
-      "/projects/pubg_mortar/threejs.png",
-      "/projects/pubg_mortar/final.png",
+      "/projects/pubg-mortar/thumbnail.png",
+      "/projects/pubg-mortar/explain.png",
+      "/projects/pubg-mortar/heightmap.png",
+      "/projects/pubg-mortar/threejs.png",
+      "/projects/pubg-mortar/final.png",
       // 죽이는 움짤?
     ],
     summary: "인게임 지도 이미지 분석과 지형 데이터를 활용해 객체 간 수평 거리 및 고도차를 분석하고, 정밀 타격에 필요한 박격포 사격 제원을 자동으로 산출하는 프로그램",
@@ -134,8 +134,9 @@ export const PROJECTS: ProjectType[] = [
     title: "도전! 롤든벨",
     subtitle: "리그 오브 레전드 실력 향상 퀴즈",
     images: [
-      "/lol_updown/첫화면",
-      "lol_updown/게임화면",
+      "/projects/lol-updown/main.png",
+      "/projects/lol-updown/play.png",
+      "/projects/lol-updown/gameover.png",
     ],
     summary: "Google Adsense, H5 Game Adsense, SEO 최적화를 통해 수익 창출을 목표로 하는 완성된 웹 서비스 운영 프로젝트",
     icon: ["fas", "gamepad"],
