@@ -58,6 +58,7 @@ function App() {
           - 프로젝트 이미지 촬영<br/>
           - 자기소개<br/>
           - 증사 새로 찍기?<br/>
+          - 이미지 미리 로딩<br/>
         </div>
         <Profile />
         <TagChart />
