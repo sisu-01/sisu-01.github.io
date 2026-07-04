@@ -85,8 +85,8 @@ export const PROJECTS: ProjectType[] = [
     title: "FineVu 시간 편집기",
     subtitle: "블랙박스 녹화 영상 편집 프로그램",
     images: [
-      "/finevu/경찰 >:( 비포",
-      "/finevu/경찰 ^^ 에프터 ㄱㄱ",
+      "/projects/FineVu_TimeEditor/no.png",
+      "/projects/FineVu_TimeEditor/yes.png",
     ],
     summary: "안전신문고에 블랙박스 영상 제출 시, 영상 속 녹화 시간과 신고 시간이 달라 접수가 반려되어 제작한 프로그램",
     icon: ["fas", "video"],
