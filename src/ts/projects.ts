@@ -240,9 +240,9 @@ export const PROJECTS: ProjectType[] = [
     title: "써브웨이 라벨 프린터",
     subtitle: "재고 관리용 라벨 출력 웹 애플리케이션",
     images: [
-      "/test/1.png",
-      "/test/2.gif",
-      "/test/3.png",
+      "/projects/subway-label-printer/thumbnail.png",
+      "/projects/subway-label-printer/printer.png",
+      "/projects/subway-label-printer/result.png"
     ],
     summary: "써브웨이에서 기존에 사용하던 비효율적인 라벨 프린팅 방식을 원클릭 버튼 형태로 개선한 웹 애플리케이션",
     icon: ["fas", "print"],
