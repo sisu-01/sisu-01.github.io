@@ -200,10 +200,8 @@ export const PROJECTS: ProjectType[] = [
     title: "Game Dev Coop",
     subtitle: "게임 개발 협업 웹서비스",
     images: [
-      "/game_dev_tool/메인 화면",
-      "/game_dev_tool/칸반",
-      "/game_dev_tool/dnd",
-      "/game_dev_tool/대충 아무 팝업설정화면",
+      "/projects/game-dev-coop/kanban.png",
+      "/projects/game-dev-coop/dashboard.png"
     ],
     summary: "Jira의 불필요한 기능은 덜어내고 게임 개발에 특화된 기능들을 추가하여, 게임 개발자들이 협업에만 집중할 수 있도록 도와주는 웹서비스",
     icon: ["fas", "calendar-days"],
