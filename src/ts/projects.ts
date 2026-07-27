@@ -374,7 +374,8 @@ export const PROJECTS: ProjectType[] = [
     title: "PowerWinup",
     subtitle: "대규모 에이전트 중앙 관리 솔루션",
     images: [
-      "/powerwinup/pdf 에 있는거 그거라도..",
+      "/projects/powerwinup/dashboard.png",
+      "/projects/powerwinup/explain.png"
     ],
     summary: "기업들의 직원 PC의 윈도우 업데이트를 자동으로 관리하고 업데이트 실패 시 원격으로 문제를 해결할 수 있도록 도와주는 솔루션",
     icon: ["fab", "windows"],
