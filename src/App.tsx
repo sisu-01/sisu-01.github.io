@@ -59,7 +59,6 @@ function App() {
           - 자기소개<br/>
           - 증사 새로 찍기?<br/>
           - 이미지 미리 로딩<br/>
-          - favicon<br/>
           - opengraph<br/>
         </div>
         <Profile />
