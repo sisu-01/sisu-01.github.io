@@ -61,7 +61,6 @@ function App() {
           - 이미지 미리 로딩<br/>
           - favicon<br/>
           - opengraph<br/>
-          - 이미지 클릭하면 크게 보기<br/>
         </div>
         <Profile />
         <TagChart />

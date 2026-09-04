@@ -76,3 +76,7 @@
   background-color: white;
   transform: scale(1.1);
 }
+
+.image {
+  cursor: pointer;
+}

@@ -36,6 +36,9 @@ const Carousel = ({ images }: CarouselProps) => {
           src={images[currentIndex]}
           alt={`Project screenshot ${currentIndex + 1}`}
           className={styles.image}
+          onClick={() =>
+            window.open(images[currentIndex], "_blank", "noopener,noreferrer")
+          }
         />
       </div>
 
