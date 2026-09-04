@@ -26,7 +26,7 @@ function App() {
     <div className={styles.app}>
       <header className={styles.header}>
       <div className={styles.headerInner}>
-        <div className={styles.logo}>Portfolio</div>
+        <div className={styles.logo}>JW's Portfolio</div>
 
         <nav className={styles.nav}>
           <a href="#main-projects">주요 프로젝트</a>
@@ -59,7 +59,6 @@ function App() {
           - 자기소개<br/>
           - 증사 새로 찍기?<br/>
           - 이미지 미리 로딩<br/>
-          - opengraph<br/>
         </div>
         <Profile />
         <TagChart />
