@@ -3,9 +3,9 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  background-color: var(--bg-sub);
+  /* background-color: var(--bg-sub); */
   border-radius: 0.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .imageWrapper {
@@ -52,15 +52,14 @@
 .next { right: 0.5rem; }
 
 .dotsContainer {
-  position: absolute;
-  bottom: 0.75rem;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  justify-content: center;
   gap: 0.4rem;
   background-color: rgba(0, 0, 0, 0.4);
+  margin: 0.5rem auto;
   padding: 0.35rem 0.6rem;
   border-radius: 1rem;
+  width: fit-content;
   backdrop-filter: blur(4px);
 }
 
