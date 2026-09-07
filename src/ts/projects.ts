@@ -1,6 +1,8 @@
 // src/projects.ts
 import type { ProjectType } from "./types";
 
+// 이미지 크기는 600x375
+
 export const PROJECTS: ProjectType[] = [
   {
     title: "PUBG 박격포 계산기",
