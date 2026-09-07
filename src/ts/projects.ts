@@ -335,7 +335,8 @@ export const PROJECTS: ProjectType[] = [
     title: "SISU",
     subtitle: "Django 활용 개인 블로그",
     images: [
-      "/sisu/메인화면",
+      "/projects/sisu2/blog.png",
+      "/projects/sisu2/movie.png"
     ],
     summary: "요약입니두~",
     icon: ["fas", "newspaper"],

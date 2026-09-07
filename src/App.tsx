@@ -61,7 +61,6 @@ function App() {
           - 브이패드
           - 포트폴리오
           - 노래방 업로더
-          - sisu
         </div>
         <Profile />
         <TagChart />
