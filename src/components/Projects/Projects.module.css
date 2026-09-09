@@ -109,11 +109,21 @@
 .iconLink:hover {
   color: var(--accent-blue);
 }
-
+.serviceUrl {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-sub);
+  color: var(--accent-blue);
+  text-decoration-line: none;
+  transition: all 0.2s ease;
+}
+.serviceUrl:hover {
+  color: var(--accent-blue-hover);
+}
 .summary {
   font-size: 0.95rem;
   color: var(--text-secondary);
-  margin-top: 1.25rem;
+  margin-top: 0.6rem;
   margin-bottom: 1.5rem;
   line-height: 1.8;
 }

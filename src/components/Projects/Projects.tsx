@@ -42,7 +42,7 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
               
               {/* 우측 상단 링크 아이콘 영역 (서비스 URL 및 깃허브) */}
               <div className={styles.linkIcons}>
-                {project.serviceUrl && (
+                {/* {project.serviceUrl && (
                   <a 
                     href={project.serviceUrl} 
                     target="_blank" 
@@ -50,9 +50,9 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
                     className={styles.iconLink}
                     title="서비스 바로가기"
                   >
-                    <i className="fas fa-external-link-alt"></i>
+                    <i className="fas fa-link"></i>
                   </a>
-                )}
+                )} */}
                 {project.repoUrl && (
                   <a 
                     href={project.repoUrl} 
@@ -70,6 +70,17 @@ const Projects = ({ projects, isMain, getCategories }: ProjectsProps) => {
             <div className={isMain ? styles.mainImages : styles.sideImages}>
               <Carousel images={project.images} />
             </div>
+            {project.serviceUrl && (
+              <a 
+                href={project.serviceUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.serviceUrl}
+                title="서비스 바로가기"
+              >
+                {project.serviceUrl}
+              </a>
+            )}
             <div className={styles.summary}>{project.summary}</div>
             
             {project.techStack.length > 0 && (
