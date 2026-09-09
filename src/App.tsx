@@ -60,7 +60,6 @@ function App() {
           - 카연갤 북마크
           - 브이패드
           - 포트폴리오
-          - 노래방 업로더
         </div>
         <Profile />
         <TagChart />

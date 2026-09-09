@@ -112,9 +112,10 @@ export const PROJECTS: ProjectType[] = [
     title: "노래방 유튜브 업로더",
     subtitle: "TJ 미디어 녹음 파일 유튜브 업로더",
     images: [
-      "/tj/.mp3 파일목록 -> 영상화",
+      "/projects/TJ_Youtube_uploader/thumbnail.png",
+      "/projects/TJ_Youtube_uploader/description.png"
     ],
-    summary: "곡 정보 스크래핑, 비디오 인코딩 및 유튜브 업로드 자동화 프로그램",
+    summary: "MoviePy를 활용하여 녹음된 mp3 파일들을 영상으로 인코딩하고 유튜브에 업로드하는 자동화 프로그램",
     icon: ["fas", "microphone-lines"],
     isMain: false,
     techStack: [
