@@ -422,9 +422,9 @@ export const PROJECTS: ProjectType[] = [
     title: "V-pad",
     subtitle: "키로거 방지 보안 가상 키패드",
     images: [
-      "/vpad/pc 화면",
-      "/vpad/모바일 화면",
-      "/vpad/pdf 그거?"
+      "/projects/vpad/thumbnail.png",
+      "/projects/vpad/description.png",
+      "/projects/vpad/vpad.png"
     ],
     summary: "키보드 해킹(키로거)을 방지하기 위해 마우스 입력 기반의 가상 키패드를 제공하고, 클라이언트-서버 간 구간 암호화를 통해 입력 데이터를 안전하게 보호하는 보안 솔루션",
     icon: ["fas", "keyboard"],
