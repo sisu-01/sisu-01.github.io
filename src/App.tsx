@@ -51,14 +51,14 @@ function App() {
     </header>
 
       <main className={styles.main}>
-        <div>
+        {/* <div>
           Todo:<br/>
           - 증사 새로 찍기?<br/>
           - 도전! 롤든벨 flask, scapping 같이 안 되는 이유 확인<br/>
           - 쪼개져있는 프론트-백앤드 리포지토리 하나로 합치고 Readme.md 작성, 트러블 슈팅 ㄱ<br/>
           - 프로젝트 이미지 촬영<br/>
           - 포트폴리오
-        </div>
+        </div> */}
         <Profile />
         <TagChart />
         <CategoryToggle getCategories={getCategories} setCategories={setCategories} />

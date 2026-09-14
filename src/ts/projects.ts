@@ -58,31 +58,31 @@ export const PROJECTS: ProjectType[] = [
         "5. 지형 데이터 시각화를 위한 three.js 구현",
     repoUrl: "https://github.com/sisu-01/pubg-mortar-calc"
   },
-  {
-    title: "포트폴리오",
-    subtitle: "프로젝트 정리 웹사이트",
-    images: [
-      "/portfolio/pc사진",
-      "/portfolio/모바일",
-    ],
-    summary: "지금까지 진행했던 프로젝트들을 보기 좋게 나열한 사이트",
-    icon: ["fas", "code"],
-    isMain: false,
-    techStack: [
-      {
-        type: "프론트엔드",
-        tags: [/*"HTML", "CSS", */"Vite", "React", "TypeScript"],
-        contents: []
-      },
-      {
-        type: "인프라",
-        tags: ["GithubPages"],
-        contents: []
-      }
-    ],
-    etc: "",
-    repoUrl: "https://github.com/sisu-01/sisu-01.github.io"
-  },
+  // {
+  //   title: "포트폴리오",
+  //   subtitle: "프로젝트 정리 웹사이트",
+  //   images: [
+  //     "/portfolio/pc사진",
+  //     "/portfolio/모바일",
+  //   ],
+  //   summary: "지금까지 진행했던 프로젝트들을 보기 좋게 나열한 사이트",
+  //   icon: ["fas", "code"],
+  //   isMain: false,
+  //   techStack: [
+  //     {
+  //       type: "프론트엔드",
+  //       tags: [/*"HTML", "CSS", */"Vite", "React", "TypeScript"],
+  //       contents: []
+  //     },
+  //     {
+  //       type: "인프라",
+  //       tags: ["GithubPages"],
+  //       contents: []
+  //     }
+  //   ],
+  //   etc: "",
+  //   repoUrl: "https://github.com/sisu-01/sisu-01.github.io"
+  // },
   {
     title: "FineVu 시간 편집기",
     subtitle: "블랙박스 녹화 영상 편집 프로그램",
