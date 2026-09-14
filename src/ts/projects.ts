@@ -193,8 +193,8 @@ export const PROJECTS: ProjectType[] = [
       }
     ],
     etc:
-    "스크래핑과 API 서버를 하나의 App에서 관리하기 위해 Flask를 도입했지만,\n~~한 이유로 불가능하다는 것을 알게됐다.\n\n"+
-    "상업용 웹이 아니면 80번 포트가 막혀있어 http-01 방식의 let's encrypt를 사용할 수 없다.\n\n"+
+    // "스크래핑과 API 서버를 하나의 App에서 관리하기 위해 Flask를 도입했지만,\n~~한 이유로 불가능하다는 것을 알게됐다.\n\n"+
+    "가정용 인터넷 요금제는 80번 포트가 막혀있어 http-01 방식의 let's encrypt 자동 인증 사용할 수 없다는 것을 알게됐다.\n\n"+
     "사용자들은 글을 잘 읽지 않는다. 설명글보다 명확한 UX가 중요하다는 것을 느꼈다.",
     repoUrl: "https://github.com/sisu-01/lol_nextjs",
     serviceUrl: "https://www.lol-updown.com/"
