@@ -277,9 +277,9 @@ export const PROJECTS: ProjectType[] = [
     title: "카연갤 북마크",
     subtitle: "만화 필터링·클러스터링 웹 서비스",
     images: [
-      "/cartoon_bookmark/화면들...",
-      // ...
-      "/cartoon_bookmark/그래픽 차트 시각화",
+      "/projects/cartoon_nextjs/thumbnail.png",
+      "/projects/cartoon_nextjs/dbscan.png",
+      "/projects/cartoon_nextjs/share.png"
     ],
     summary: "디시인사이드 카툰-연재 갤러리의 게시글을 수집 및 가공하여 보기 편하게 만들고 손쉽게 공유 가능한 웹 서비스",
     icon: ["fas", "book-bookmark"],
