@@ -8,7 +8,7 @@ const Profile = () => {
         <div className={styles.imageContent}>
           <div className={styles.imageWrapper}>
             <img 
-              src="/path/to/your/image.jpg" 
+              src="/public/profile.jpg" 
               alt="지원자 프로필 사진" 
               className={styles.profileImage} 
             />
@@ -21,7 +21,7 @@ const Profile = () => {
           </h1>
           <p className={styles.description}>
             <h2>
-              안녕하십니까, 아이디어를 실체화하는 개발자 이종원입니다.
+              안녕하십니까, 아이디어를 실체화하는 개발자 이종원입니다.<br/>
             </h2>
           </p>
         </div>
